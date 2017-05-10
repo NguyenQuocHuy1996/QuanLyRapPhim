@@ -1,0 +1,22 @@
+C:\Users\user\Desktop\Review\Bin\DTO.dll
+C:\Users\user\Desktop\Review\Bin\DTO.pdb
+C:\Users\user\Desktop\Review\DTO\obj\Debug\DTO.dll
+C:\Users\user\Desktop\Review\DTO\obj\Debug\DTO.pdb
+C:\Users\B\Downloads\Review-20170315T065851Z-001\Review\Bin\DTO.dll
+C:\Users\B\Downloads\Review-20170315T065851Z-001\Review\Bin\DTO.pdb
+C:\Users\B\Downloads\Review-20170315T065851Z-001\Review\DTO\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\B\Downloads\Review-20170315T065851Z-001\Review\DTO\obj\Debug\DTO.dll
+C:\Users\B\Downloads\Review-20170315T065851Z-001\Review\DTO\obj\Debug\DTO.pdb
+C:\Users\user\Downloads\Review-20170320T083256Z-001\Review\Bin\DTO.dll
+C:\Users\user\Downloads\Review-20170320T083256Z-001\Review\Bin\DTO.pdb
+C:\Users\user\Downloads\Review-20170320T083256Z-001\Review\DTO\obj\Debug\DTO.dll
+C:\Users\user\Downloads\Review-20170320T083256Z-001\Review\DTO\obj\Debug\DTO.pdb
+E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim-master\Review\Bin\DTO.dll
+E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim-master\Review\Bin\DTO.pdb
+E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim-master\Review\DTO\obj\Debug\DTO.dll
+E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim-master\Review\DTO\obj\Debug\DTO.pdb
+E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\Bin\DTO.dll
+E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\Bin\DTO.pdb
+E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\DTO\obj\Debug\DTO.dll
+E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\DTO\obj\Debug\DTO.pdb
+E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
