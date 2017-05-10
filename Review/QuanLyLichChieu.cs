@@ -113,7 +113,7 @@ namespace Review
                 //Them vao doi tuong vua tao
                 int themlichchieu = new ThemBUS().ThemLichChieuBUS(lichchieu);
                 //Cap nhat lai dgv va dua ra thong bao
-                dgvLichChieu.DataSource = GetData.GetLichChieu().Tables[0];
+                dgvLichChieu.DataSource = GetData.GetLichChieuDK(cbTenRapPhim.SelectedText).Tables[0];
                 MessageBox.Show("Thêm lịch chiếu thành công");
             }
             catch (SqlException)
@@ -147,7 +147,7 @@ namespace Review
                 //Sua vao doi tuong vua tao
                 int sualichchieu = new SuaBUS().SuaLichChieuBUS(lichchieu);
                 //Cap nhat lai dgv va dua ra thong bao
-                dgvLichChieu.DataSource = GetData.GetLichChieu().Tables[0];
+                dgvLichChieu.DataSource = GetData.GetLichChieuDK(cbTenRapPhim.Text).Tables[0];
                 MessageBox.Show("Sửa lịch chiếu thành công");
             }
             catch (SqlException)
@@ -182,7 +182,7 @@ namespace Review
                 //Xoa vao doi tuong vua tao
                 int xoalichchieu = new XoaBUS().XoaLichChieuBUS(lichchieu);
                 //Cap nhat lai dgv va dua ra thong bao
-                dgvLichChieu.DataSource = GetData.GetLichChieu().Tables[0];
+                dgvLichChieu.DataSource = GetData.GetLichChieuDK(cbTenRapPhim.Text).Tables[0];
                 MessageBox.Show("Xóa lịch chiếu thành công");
             }
             catch (SqlException)

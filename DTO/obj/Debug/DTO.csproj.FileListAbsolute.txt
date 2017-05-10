@@ -20,3 +20,8 @@ E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\Bin\DTO.pdb
 E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\DTO\obj\Debug\DTO.dll
 E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\DTO\obj\Debug\DTO.pdb
 E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Bin\DTO.dll
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Bin\DTO.pdb
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\DTO\obj\Debug\DTO.dll
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\DTO\obj\Debug\DTO.pdb

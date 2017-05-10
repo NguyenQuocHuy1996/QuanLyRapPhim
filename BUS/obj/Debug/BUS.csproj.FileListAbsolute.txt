@@ -23,3 +23,8 @@ E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\Bin\BUS.pdb
 E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
 E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\BUS\obj\Debug\BUS.dll
 E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\BUS\obj\Debug\BUS.pdb
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Bin\BUS.dll
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Bin\BUS.pdb
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\BUS\obj\Debug\BUS.csprojResolveAssemblyReference.cache
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\BUS\obj\Debug\BUS.dll
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\BUS\obj\Debug\BUS.pdb

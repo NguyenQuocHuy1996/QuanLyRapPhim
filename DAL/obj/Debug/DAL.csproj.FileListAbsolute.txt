@@ -26,3 +26,8 @@ E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\Bin\DAL.pdb
 E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\DAL\obj\Debug\DAL.dll
 E:\Hoc tap\Lập trình CSDL\QuanLyRapChieuPhim\Review\DAL\obj\Debug\DAL.pdb
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Bin\DAL.dll
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Bin\DAL.pdb
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\DAL\obj\Debug\DAL.dll
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\DAL\obj\Debug\DAL.pdb
