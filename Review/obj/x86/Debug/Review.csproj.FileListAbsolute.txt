@@ -83,3 +83,28 @@ E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.QuanLyRap
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.Register.resources
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.Ve.resources
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.csproj.GenerateResource.Cache
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Bin\Review.exe.config
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Bin\Review.exe
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Bin\Review.pdb
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.csprojResolveAssemblyReference.cache
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Interop.ShockwaveFlashObjects.dll
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Interop.WMPLib.dll
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\AxInterop.ShockwaveFlashObjects.dll
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\AxInterop.WMPLib.dll
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.csproj.ResolveComReference.cache
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.QuanLyLichChieu.resources
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.FormChinh.resources
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.FormQuanLy.resources
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.Ghe.resources
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.Login.resources
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.Phim.resources
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.Properties.Resources.resources
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.QuanLyNhanVien.resources
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.QuanLyPhongChieu.resources
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.QuanLyPhim.resources
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.QuanLyRapPhim.resources
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.Register.resources
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.Ve.resources
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.csproj.GenerateResource.Cache
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.exe
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.pdb
