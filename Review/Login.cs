@@ -59,15 +59,15 @@ namespace Review
                         {
                             FormQuanLy show = new FormQuanLy(taikhoan, quyen);
                             show.Show();
-                            if(!show.Visible)
-                                this.Close();
+                            if(show.Visible)
+                                this.Hide();
                         }
                         else
                         {
                             FormChinh show = new FormChinh(taikhoan, quyen, user, login);
                             show.Show();
-                            if (!show.Visible)
-                                this.Close();
+                            if (show.Visible)
+                                this.Hide();
                         }
                     }
                     else

@@ -108,3 +108,4 @@ C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.Ve.resource
 C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.csproj.GenerateResource.Cache
 C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.exe
 C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.pdb
+C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.Report.resources

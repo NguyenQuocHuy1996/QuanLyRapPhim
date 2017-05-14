@@ -66,5 +66,11 @@ namespace Review
         {
             this.Close();
         }
+        // Button Report Clicked
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Report form = new Report();
+            form.ShowDialog();
+        }
     }
 }
