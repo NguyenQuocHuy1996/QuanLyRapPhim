@@ -28,49 +28,56 @@ namespace Review
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            dt = GetData.GetTaiKhoanDK(txtTaiKhoan.Text, txtMatKhau.Text);
-
+            bool error = false;
             if (txtTaiKhoan.Text == "" && txtMatKhau.Text != "")
             {
                 lbThongBao.Text = "Nhập tài khoản";
+                error = true;
             }
             else if (txtMatKhau.Text == "" && txtTaiKhoan.Text != "")
             {
                 lbThongBao.Text = "Nhập mật khẩu";
+                error = true;
             }
             else  if (txtTaiKhoan.Text == "" && txtMatKhau.Text == "")
             {
                 lbThongBao.Text = "Nhập tài khoản và mật khẩu";
+                error = true;
             }
-            else
+            if(error == false)
             {
-                if (dt.Tables[0].Rows.Count == 1)
+                try
                 {
-                    lbThongBao.Text = "Đăng nhập thành công";
-                    quyen = dt.Tables[0].Rows[0][3].ToString();
-                    taikhoan = dt.Tables[0].Rows[0][1].ToString();
-                    if (quyen == "Admin")
+                    dt = GetData.GetTaiKhoanDK(txtTaiKhoan.Text, txtMatKhau.Text);
+                    if (dt.Tables[0].Rows.Count == 1)
                     {
-                        lbThongBao.Text = "Xin chào admin";
-                    }
-                    else if (quyen == "Quản lý")
-                    {
-                        FormQuanLy show = new FormQuanLy(taikhoan,quyen);
-                        show.Show();
-                        this.Close();
+                        lbThongBao.Text = "Đăng nhập thành công";
+                        quyen = dt.Tables[0].Rows[0][3].ToString();
+                        taikhoan = dt.Tables[0].Rows[0][1].ToString();
+                        if (quyen == "Admin" || quyen == "Quản lý")
+                        {
+                            lbThongBao.Text = "Xin chào admin";
+                            FormQuanLy show = new FormQuanLy(taikhoan, quyen);
+                            show.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            lbThongBao.Text = "Đang chuyển trang, vui lòng chờ";
+                            FormChinh show = new FormChinh(taikhoan, quyen, user, login);
+                            show.Show();
+                            this.Close();
+                        }
                     }
                     else
                     {
-                        FormChinh show = new FormChinh(taikhoan, quyen, user, login);
-                        show.Show();
-                        this.Close();
+                        txtTaiKhoan.Text = txtMatKhau.Text = "";
+                        lbThongBao.Text = "Sai tên tài khoản hoặc mật khẩu";
                     }
                 }
-                else
-                {
-                    txtTaiKhoan.Text = txtMatKhau.Text = "";
-                    lbThongBao.Text = "Sai tên tài khoản hoặc mật khẩu";
-                }
+                catch (Exception err) {
+                    throw err;
+                };
             }
         }
 

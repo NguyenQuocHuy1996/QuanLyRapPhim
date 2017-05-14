@@ -167,9 +167,9 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbTenNhanVien);
             this.groupBox1.Controls.Add(this.txtTenRapPhim);
-            this.groupBox1.Location = new System.Drawing.Point(549, 0);
+            this.groupBox1.Location = new System.Drawing.Point(542, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(331, 250);
+            this.groupBox1.Size = new System.Drawing.Size(338, 262);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             // 
@@ -218,8 +218,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(885, 262);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvRapPhim);
+            this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "QuanLyRapPhim";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -17,7 +17,7 @@ namespace Review
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new FormChinh());
 
-            Application.Run(new FormQuanLy());
+            Application.Run(new Login());
         }
     }
 }
