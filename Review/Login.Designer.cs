@@ -36,12 +36,13 @@
             this.btnRegister = new System.Windows.Forms.Button();
             this.lbThongBao = new System.Windows.Forms.Label();
             this.cbPass = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 32);
+            this.label1.Location = new System.Drawing.Point(43, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 0;
@@ -50,7 +51,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 58);
+            this.label2.Location = new System.Drawing.Point(43, 76);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 13);
             this.label2.TabIndex = 1;
@@ -58,14 +59,14 @@
             // 
             // txtTaiKhoan
             // 
-            this.txtTaiKhoan.Location = new System.Drawing.Point(107, 29);
+            this.txtTaiKhoan.Location = new System.Drawing.Point(107, 47);
             this.txtTaiKhoan.Name = "txtTaiKhoan";
             this.txtTaiKhoan.Size = new System.Drawing.Size(201, 20);
             this.txtTaiKhoan.TabIndex = 2;
             // 
             // txtMatKhau
             // 
-            this.txtMatKhau.Location = new System.Drawing.Point(107, 55);
+            this.txtMatKhau.Location = new System.Drawing.Point(107, 73);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(201, 20);
             this.txtMatKhau.TabIndex = 3;
@@ -103,7 +104,7 @@
             // cbPass
             // 
             this.cbPass.AutoSize = true;
-            this.cbPass.Location = new System.Drawing.Point(102, 81);
+            this.cbPass.Location = new System.Drawing.Point(107, 99);
             this.cbPass.Name = "cbPass";
             this.cbPass.Size = new System.Drawing.Size(95, 17);
             this.cbPass.TabIndex = 7;
@@ -111,11 +112,23 @@
             this.cbPass.UseVisualStyleBackColor = true;
             this.cbPass.CheckedChanged += new System.EventHandler(this.cbPass_CheckedChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.MenuText;
+            this.label3.Location = new System.Drawing.Point(86, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(187, 20);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Đăng nhập để tiếp tục";
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(375, 180);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.cbPass);
             this.Controls.Add(this.lbThongBao);
             this.Controls.Add(this.btnRegister);
@@ -145,5 +158,6 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label lbThongBao;
         private System.Windows.Forms.CheckBox cbPass;
+        private System.Windows.Forms.Label label3;
     }
 }

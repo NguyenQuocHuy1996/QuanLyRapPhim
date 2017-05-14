@@ -54,19 +54,20 @@ namespace Review
                         lbThongBao.Text = "Đăng nhập thành công";
                         quyen = dt.Tables[0].Rows[0][3].ToString();
                         taikhoan = dt.Tables[0].Rows[0][1].ToString();
+
                         if (quyen == "Admin" || quyen == "Quản lý")
                         {
-                            lbThongBao.Text = "Xin chào admin";
                             FormQuanLy show = new FormQuanLy(taikhoan, quyen);
                             show.Show();
-                            this.Close();
+                            if(!show.Visible)
+                                this.Close();
                         }
                         else
                         {
-                            lbThongBao.Text = "Đang chuyển trang, vui lòng chờ";
                             FormChinh show = new FormChinh(taikhoan, quyen, user, login);
                             show.Show();
-                            this.Close();
+                            if (!show.Visible)
+                                this.Close();
                         }
                     }
                     else
