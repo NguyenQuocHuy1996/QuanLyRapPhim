@@ -15,9 +15,8 @@ namespace DTO
         public int ThoiLuong { get; set; }
         public string TheLoai { get; set; }
         public byte[] HinhAnh { get; set; }
-        public string Trailer { get; set; }
 
-        public PhimDTO(string maPhim, string tenPhim, string daoDien, string quocGia, int nam, int thoiLuong, string theLoai, byte[] hinhAnh, string trailer)
+        public PhimDTO(string maPhim, string tenPhim, string daoDien, string quocGia, int nam, int thoiLuong, string theLoai, byte[] hinhAnh)
         {
             MaPhim = maPhim;
             TenPhim = tenPhim;
@@ -27,7 +26,6 @@ namespace DTO
             ThoiLuong = thoiLuong;
             TheLoai = theLoai;
             HinhAnh = hinhAnh;
-            Trailer = trailer;
         }
 
         public PhimDTO(string maPhim, string tenPhim, string daoDien, string quocGia, int nam, int thoiLuong, string theLoai)

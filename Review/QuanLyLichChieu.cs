@@ -198,6 +198,8 @@ namespace Review
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+            FormQuanLy quanly = new FormQuanLy();
+            quanly.Show();
         }
     }
 }

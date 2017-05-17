@@ -42,6 +42,8 @@ namespace Review
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+            FormQuanLy quanly = new FormQuanLy();
+            quanly.Show();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -145,6 +147,22 @@ namespace Review
         private void cbTenNhanVien_SelectedIndexChanged(object sender, EventArgs e)
         {
             txtMaNhanVien.Text = cbTenNhanVien.SelectedValue.ToString();
+        }
+
+        private void dgvRapPhim_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cbMaRapPhim.Text = dgvRapPhim.CurrentRow.Cells[0].Value.ToString().Trim();
+            txtTenRapPhim.Text = dgvRapPhim.CurrentRow.Cells[1].Value.ToString().Trim();
+            txtDiaChi.Text = dgvRapPhim.CurrentRow.Cells[2].Value.ToString().Trim();
+            txtMaNhanVien.Text = dgvRapPhim.CurrentRow.Cells[3].Value.ToString().Trim();
+            cbTenNhanVien.Text = dgvRapPhim.CurrentRow.Cells[4].Value.ToString().Trim();
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            cbTenNhanVien.Text = cbMaRapPhim.Text = "";
+            txtDiaChi.Text = txtMaNhanVien.Text = txtTenRapPhim.Text = "";
         }
     }
 }

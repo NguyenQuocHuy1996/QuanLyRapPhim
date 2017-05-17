@@ -32,6 +32,11 @@ namespace Review
         private void cbTenRapPhim_SelectedIndexChanged(object sender, EventArgs e)
         {
             dgvPhongChieu.DataSource = GetData.GetPhongChieuDK(cbTenRapPhim.SelectedValue.ToString()).Tables[0];
+            dgvPhongChieu.Columns[0].HeaderText = "Mã phòng chiếu";
+            dgvPhongChieu.Columns[1].HeaderText = "Tên phòng chiếu";
+            dgvPhongChieu.Columns[2].HeaderText = "Định dạng";
+            dgvPhongChieu.Columns[3].HeaderText = "Mã rạp phim";
+            dgvPhongChieu.Columns[4].HeaderText = "Tên rạp phim";
 
             cbMaPhongChieu.DataSource = GetData.GetPhongChieuDK(cbTenRapPhim.SelectedValue.ToString()).Tables[0];
             cbMaPhongChieu.DisplayMember = "MaPhongChieu";
@@ -217,6 +222,14 @@ namespace Review
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+            FormQuanLy quanly = new FormQuanLy();
+            quanly.Show();
+        }
+
+        private void dgvPhongChieu_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cbMaPhongChieu.Text = dgvPhongChieu.CurrentRow.Cells[0].Value.ToString().Trim();
+            cbTenPhongChieu.Text = dgvPhongChieu.CurrentRow.Cells[1].Value.ToString().Trim();
         }
     }
 }

@@ -26,7 +26,7 @@ namespace Review
             cbTenPhim.DataSource = GetData.GetPhim().Tables[0];
             cbTenPhim.DisplayMember = "TenPhim";
             cbTenPhim.ValueMember = "MaPhim";
-            cbTenPhim.Text = "";
+            //cbTenPhim.Text = "";
         }
 
         private DataSet NgayChieu()
@@ -67,9 +67,9 @@ namespace Review
         {
             cbNgayChieu.DataSource = NgayChieu().Tables[0];
             cbNgayChieu.DisplayMember = "NgayChieu";
-            cbNgayChieu.Text = "";
+            //cbNgayChieu.Text = "";
             //An thong tin
-            pictureBox1.Visible = gbInfo.Visible = lbTenPhim.Visible = lbGioChieu.Visible = false;
+            //pictureBox1.Visible = gbInfo.Visible = lbTenPhim.Visible = lbGioChieu.Visible = false;
         }
 
         private void cbNgayChieu_SelectedIndexChanged(object sender, EventArgs e)

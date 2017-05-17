@@ -28,8 +28,6 @@ namespace Review
         {
             cbTenPhim.DataSource = GetData.GetPhim().Tables[0];
             cbTenPhim.DisplayMember = "TenPhim";
-            cbTenPhim.ValueMember = "Trailer";
-            cbTenPhim.Text = "";
 
             lbUser.Visible = user;
             btnLogin.Visible = login;
@@ -58,7 +56,7 @@ namespace Review
 
         private void cbTenPhim_SelectedIndexChanged(object sender, EventArgs e)
         {
-            axWindowsMediaPlayer1.URL = Application.StartupPath + @"\Trailer\" + cbTenPhim.SelectedValue.ToString();
+        
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

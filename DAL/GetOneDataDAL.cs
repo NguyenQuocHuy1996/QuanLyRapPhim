@@ -100,7 +100,6 @@ namespace DAL
                     phim.ThoiLuong = read.GetInt32(5);
                     phim.TheLoai = read.GetString(6);
                     phim.HinhAnh = (byte[])read["hinhAnh"];
-                    phim.Trailer = read.GetString(8);
                 }
             }
             catch (SqlException ex)

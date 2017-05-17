@@ -71,7 +71,6 @@ namespace DAL
             paras.Add(new SqlParameter("@ThoiLuong", film.ThoiLuong));
             paras.Add(new SqlParameter("@TheLoai", film.TheLoai));
             paras.Add(new SqlParameter("@HinhAnh", film.HinhAnh));
-            paras.Add(new SqlParameter("@Trailer", film.Trailer));
 
             try
             {

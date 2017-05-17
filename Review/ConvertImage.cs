@@ -11,7 +11,7 @@ using BUS;
 namespace Review
 {
     public class ConvertImage
-    {
+    {        
         public static byte[] ConvertImageToByte(string Path)
         {
             FileStream fs;
@@ -26,8 +26,9 @@ namespace Review
 
         public static Image ConvertByteToImage(byte[] bytnp)
         {
+            MemoryStream stream;
             System.Drawing.Image picture;
-            using (MemoryStream stream = new MemoryStream(bytnp))
+            using (stream = new MemoryStream(bytnp))
             {
                 picture = Image.FromStream(stream);
             }

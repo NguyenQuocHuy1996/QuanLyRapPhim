@@ -44,13 +44,13 @@
             this.cbTenPhim = new System.Windows.Forms.ComboBox();
             this.btnThem = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbNgayChieu = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbGioChieu = new System.Windows.Forms.ComboBox();
+            this.btnSua = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtMaPhim = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbNgayChieu = new System.Windows.Forms.ComboBox();
-            this.btnSua = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cbGioChieu = new System.Windows.Forms.ComboBox();
             this.dgvLichChieu = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLichChieu)).BeginInit();
@@ -190,7 +190,7 @@
             this.cbTenPhim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cbTenPhim.Location = new System.Drawing.Point(105, 40);
             this.cbTenPhim.Name = "cbTenPhim";
-            this.cbTenPhim.Size = new System.Drawing.Size(321, 21);
+            this.cbTenPhim.Size = new System.Drawing.Size(237, 21);
             this.cbTenPhim.TabIndex = 1;
             this.cbTenPhim.SelectedIndexChanged += new System.EventHandler(this.cbTenPhim_SelectedIndexChanged);
             // 
@@ -206,6 +206,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbNgayChieu);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.cbGioChieu);
             this.groupBox1.Controls.Add(this.btnSua);
@@ -227,12 +228,49 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtMaPhim);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.cbNgayChieu);
-            this.groupBox1.Location = new System.Drawing.Point(162, 2);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(576, 240);
+            this.groupBox1.Size = new System.Drawing.Size(355, 500);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
+            // 
+            // cbNgayChieu
+            // 
+            this.cbNgayChieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNgayChieu.FormattingEnabled = true;
+            this.cbNgayChieu.Location = new System.Drawing.Point(105, 120);
+            this.cbNgayChieu.Name = "cbNgayChieu";
+            this.cbNgayChieu.Size = new System.Drawing.Size(85, 21);
+            this.cbNgayChieu.TabIndex = 32;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(196, 123);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.TabIndex = 20;
+            this.label9.Text = "Giờ chiếu:";
+            // 
+            // cbGioChieu
+            // 
+            this.cbGioChieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGioChieu.FormattingEnabled = true;
+            this.cbGioChieu.Location = new System.Drawing.Point(257, 120);
+            this.cbGioChieu.Name = "cbGioChieu";
+            this.cbGioChieu.Size = new System.Drawing.Size(69, 21);
+            this.cbGioChieu.TabIndex = 21;
+            // 
+            // btnSua
+            // 
+            this.btnSua.Location = new System.Drawing.Point(97, 205);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(75, 23);
+            this.btnSua.TabIndex = 31;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // label2
             // 
@@ -260,52 +298,13 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "Ngày chiếu:";
             // 
-            // cbNgayChieu
-            // 
-            this.cbNgayChieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbNgayChieu.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.cbNgayChieu.FormattingEnabled = true;
-            this.cbNgayChieu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.cbNgayChieu.Location = new System.Drawing.Point(105, 120);
-            this.cbNgayChieu.Name = "cbNgayChieu";
-            this.cbNgayChieu.Size = new System.Drawing.Size(85, 21);
-            this.cbNgayChieu.TabIndex = 12;
-            // 
-            // btnSua
-            // 
-            this.btnSua.Location = new System.Drawing.Point(97, 205);
-            this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(75, 23);
-            this.btnSua.TabIndex = 31;
-            this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(196, 123);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(55, 13);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "Giờ chiếu:";
-            // 
-            // cbGioChieu
-            // 
-            this.cbGioChieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGioChieu.FormattingEnabled = true;
-            this.cbGioChieu.Location = new System.Drawing.Point(257, 120);
-            this.cbGioChieu.Name = "cbGioChieu";
-            this.cbGioChieu.Size = new System.Drawing.Size(69, 21);
-            this.cbGioChieu.TabIndex = 21;
-            // 
             // dgvLichChieu
             // 
             this.dgvLichChieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLichChieu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvLichChieu.Location = new System.Drawing.Point(0, 248);
+            this.dgvLichChieu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dgvLichChieu.Location = new System.Drawing.Point(361, 0);
             this.dgvLichChieu.Name = "dgvLichChieu";
-            this.dgvLichChieu.Size = new System.Drawing.Size(850, 302);
+            this.dgvLichChieu.Size = new System.Drawing.Size(439, 500);
             this.dgvLichChieu.TabIndex = 33;
             this.dgvLichChieu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLichChieu_CellContentClick);
             // 
@@ -313,13 +312,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(850, 550);
+            this.ClientSize = new System.Drawing.Size(800, 500);
             this.Controls.Add(this.dgvLichChieu);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "QuanLyLichChieu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Quản lý lịch chiếu phim";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -349,10 +348,10 @@
         private System.Windows.Forms.ComboBox cbTenPhongChieu;
         private System.Windows.Forms.ComboBox cbTenRapPhim;
         private System.Windows.Forms.ComboBox cbTenPhim;
-        private System.Windows.Forms.ComboBox cbNgayChieu;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbGioChieu;
         private System.Windows.Forms.DataGridView dgvLichChieu;
+        private System.Windows.Forms.ComboBox cbNgayChieu;
     }
 }

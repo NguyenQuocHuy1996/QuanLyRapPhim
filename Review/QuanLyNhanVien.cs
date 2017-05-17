@@ -23,6 +23,17 @@ namespace Review
         private void QuanLyNhanVien_Load(object sender, EventArgs e)
         {
             dgvNhanVien.DataSource = GetData.GetNhanVien().Tables[0];
+            dgvNhanVien.Columns[0].HeaderText = "Mã nhân viên";
+            dgvNhanVien.Columns[1].HeaderText = "Tên nhân viên";
+            dgvNhanVien.Columns[2].HeaderText = "Ngày sinh";
+            dgvNhanVien.Columns[3].HeaderText = "Giới tính";
+            dgvNhanVien.Columns[4].HeaderText = "Số CMND";
+            dgvNhanVien.Columns[5].HeaderText = "Địa chỉ";
+            dgvNhanVien.Columns[6].HeaderText = "Điện thoại";
+            dgvNhanVien.Columns[7].HeaderText = "Email";
+            dgvNhanVien.Columns[8].HeaderText = "Chức vụ";
+            dgvNhanVien.Columns[9].HeaderText = "Ngày vào làm";
+
             cbGioiTinh.Items.Add("Nam");
             cbGioiTinh.Items.Add("Nữ");
 
@@ -148,6 +159,8 @@ namespace Review
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+            FormQuanLy quanly = new FormQuanLy();
+            quanly.Show();
         }
 
         private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -168,6 +181,26 @@ namespace Review
         {
             txtCMND.Text = txtSoDT.Text = txtNgaySinh.Text = txtNgayVaoLam.Text = txtEmail.Text = txtDiaChi.Text = "";
             cbMaNhanVien.Text = cbTenNhanVien.Text = cbGioiTinh.Text = cbChucVu.Text = "";
+        }
+
+        private void cbMaNhanVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cbMaNhanVien.SelectedIndex;
+            cbTenNhanVien.Text = dgvNhanVien.Rows[index].Cells[1].Value.ToString().Trim();
+            txtNgaySinh.Text = dgvNhanVien.Rows[index].Cells[2].Value.ToString().Trim();
+            cbGioiTinh.Text = dgvNhanVien.Rows[index].Cells[3].Value.ToString().Trim();
+            txtCMND.Text = dgvNhanVien.Rows[index].Cells[4].Value.ToString().Trim();
+            txtDiaChi.Text = dgvNhanVien.Rows[index].Cells[5].Value.ToString().Trim();
+            txtSoDT.Text = dgvNhanVien.Rows[index].Cells[6].Value.ToString().Trim();
+            txtEmail.Text = dgvNhanVien.Rows[index].Cells[7].Value.ToString().Trim();
+            cbChucVu.Text = dgvNhanVien.Rows[index].Cells[8].Value.ToString().Trim();
+            txtNgayVaoLam.Text = dgvNhanVien.Rows[index].Cells[9].Value.ToString().Trim();
+
+        }
+
+        private void cbTenNhanVien_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -25,25 +25,29 @@ namespace Review
         private void button3_Click(object sender, EventArgs e)
         {
             QuanLyPhim formPhim = new QuanLyPhim();
-            formPhim.ShowDialog();
+            formPhim.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             QuanLyLichChieu formLichChieu = new QuanLyLichChieu();
-            formLichChieu.ShowDialog();
+            formLichChieu.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             QuanLyRapPhim formRapPhim = new QuanLyRapPhim();
-            formRapPhim.ShowDialog();
+            formRapPhim.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             QuanLyPhongChieu formPhongChieu = new QuanLyPhongChieu();
-            formPhongChieu.ShowDialog();
+            formPhongChieu.Show();
+            this.Hide();
         }
 
         private void FormQuanLy_Load(object sender, EventArgs e)
@@ -54,7 +58,8 @@ namespace Review
         private void button5_Click(object sender, EventArgs e)
         {
             QuanLyNhanVien show = new QuanLyNhanVien();
-            show.ShowDialog();
+            show.Show();
+            this.Hide();
         }
 
         private void FormQuanLy_FormClosing(object sender, FormClosingEventArgs e)

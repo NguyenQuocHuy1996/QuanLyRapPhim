@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChinh));
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,10 +36,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnDepositTicket = new System.Windows.Forms.Button();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.lbUser = new System.Windows.Forms.Label();
             this.btnLogOut = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnLogin
@@ -68,7 +65,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(932, 545);
+            this.label1.Location = new System.Drawing.Point(245, 84);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(247, 23);
             this.label1.TabIndex = 0;
@@ -79,7 +76,7 @@
             // 
             this.cbTenPhim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTenPhim.FormattingEnabled = true;
-            this.cbTenPhim.Location = new System.Drawing.Point(1017, 578);
+            this.cbTenPhim.Location = new System.Drawing.Point(330, 117);
             this.cbTenPhim.Name = "cbTenPhim";
             this.cbTenPhim.Size = new System.Drawing.Size(304, 21);
             this.cbTenPhim.TabIndex = 6;
@@ -89,7 +86,7 @@
             // 
             this.cbNgayChieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNgayChieu.FormattingEnabled = true;
-            this.cbNgayChieu.Location = new System.Drawing.Point(1017, 605);
+            this.cbNgayChieu.Location = new System.Drawing.Point(330, 144);
             this.cbNgayChieu.Name = "cbNgayChieu";
             this.cbNgayChieu.Size = new System.Drawing.Size(121, 21);
             this.cbNgayChieu.TabIndex = 7;
@@ -99,7 +96,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(920, 576);
+            this.label2.Location = new System.Drawing.Point(233, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 23);
             this.label2.TabIndex = 8;
@@ -111,7 +108,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(920, 603);
+            this.label3.Location = new System.Drawing.Point(233, 142);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 23);
             this.label3.TabIndex = 9;
@@ -122,22 +119,13 @@
             // 
             this.btnDepositTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDepositTicket.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnDepositTicket.Location = new System.Drawing.Point(1017, 632);
+            this.btnDepositTicket.Location = new System.Drawing.Point(330, 171);
             this.btnDepositTicket.Name = "btnDepositTicket";
             this.btnDepositTicket.Size = new System.Drawing.Size(75, 23);
             this.btnDepositTicket.TabIndex = 10;
             this.btnDepositTicket.Text = "Đặt vé";
             this.btnDepositTicket.UseVisualStyleBackColor = true;
             this.btnDepositTicket.Click += new System.EventHandler(this.btnDepositTicket_Click);
-            // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(356, 90);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(655, 426);
-            this.axWindowsMediaPlayer1.TabIndex = 11;
             // 
             // lbUser
             // 
@@ -166,12 +154,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Review.Properties.Resources.RapPhim;
+            this.BackgroundImage = global::Review.Properties.Resources.form;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1350, 692);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.lbUser);
-            this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.btnDepositTicket);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -186,7 +173,6 @@
             this.Text = "Quản lý rạp phim";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormChinh_FormClosing);
             this.Load += new System.EventHandler(this.FormChinh_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -200,7 +186,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnDepositTicket;
-        private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.Label lbUser;
         private System.Windows.Forms.Button btnLogOut;
     }

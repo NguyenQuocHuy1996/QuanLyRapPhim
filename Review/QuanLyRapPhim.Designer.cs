@@ -40,6 +40,7 @@
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtMaNhanVien = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -50,12 +51,14 @@
             // 
             // dgvRapPhim
             // 
+            this.dgvRapPhim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRapPhim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRapPhim.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgvRapPhim.Location = new System.Drawing.Point(0, 0);
             this.dgvRapPhim.Name = "dgvRapPhim";
-            this.dgvRapPhim.Size = new System.Drawing.Size(543, 262);
+            this.dgvRapPhim.Size = new System.Drawing.Size(455, 472);
             this.dgvRapPhim.TabIndex = 0;
+            this.dgvRapPhim.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRapPhim_CellContentClick);
             // 
             // label1
             // 
@@ -153,6 +156,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.cbMaRapPhim);
@@ -167,11 +171,22 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbTenNhanVien);
             this.groupBox1.Controls.Add(this.txtTenRapPhim);
-            this.groupBox1.Location = new System.Drawing.Point(542, 0);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.groupBox1.Location = new System.Drawing.Point(461, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(338, 262);
+            this.groupBox1.Size = new System.Drawing.Size(333, 472);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
+            // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(218, 9);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 12;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnAdd
             // 
@@ -217,13 +232,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 262);
+            this.ClientSize = new System.Drawing.Size(794, 472);
             this.Controls.Add(this.dgvRapPhim);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "QuanLyRapPhim";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "QuanLyRapPhim";
+            this.Text = "Quản lý rạp chiếu phim";
             this.Load += new System.EventHandler(this.QuanLyRapPhim_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRapPhim)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -250,5 +265,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnClear;
     }
 }

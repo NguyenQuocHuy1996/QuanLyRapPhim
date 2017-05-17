@@ -35,9 +35,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.rd4DX = new System.Windows.Forms.RadioButton();
-            this.rd3D = new System.Windows.Forms.RadioButton();
             this.rd2D = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
+            this.rd3D = new System.Windows.Forms.RadioButton();
             this.cbMaPhongChieu = new System.Windows.Forms.ComboBox();
             this.cbTenPhongChieu = new System.Windows.Forms.ComboBox();
             this.cbTenRapPhim = new System.Windows.Forms.ComboBox();
@@ -103,6 +103,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.rd4DX);
             this.groupBox1.Controls.Add(this.rd2D);
             this.groupBox1.Controls.Add(this.label5);
@@ -111,9 +112,9 @@
             this.groupBox1.Controls.Add(this.cbTenPhongChieu);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(363, 12);
+            this.groupBox1.Location = new System.Drawing.Point(396, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(324, 129);
+            this.groupBox1.Size = new System.Drawing.Size(386, 125);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phòng chiếu:";
@@ -130,19 +131,6 @@
             this.rd4DX.Text = "4D";
             this.rd4DX.UseVisualStyleBackColor = false;
             this.rd4DX.CheckedChanged += new System.EventHandler(this.rd2D_CheckedChanged);
-            // 
-            // rd3D
-            // 
-            this.rd3D.Appearance = System.Windows.Forms.Appearance.Button;
-            this.rd3D.BackColor = System.Drawing.Color.Cyan;
-            this.rd3D.Location = new System.Drawing.Point(143, 84);
-            this.rd3D.Name = "rd3D";
-            this.rd3D.Size = new System.Drawing.Size(32, 24);
-            this.rd3D.TabIndex = 13;
-            this.rd3D.TabStop = true;
-            this.rd3D.Text = "3D";
-            this.rd3D.UseVisualStyleBackColor = false;
-            this.rd3D.CheckedChanged += new System.EventHandler(this.rd2D_CheckedChanged);
             // 
             // rd2D
             // 
@@ -165,6 +153,19 @@
             this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "Định dạng:";
+            // 
+            // rd3D
+            // 
+            this.rd3D.Appearance = System.Windows.Forms.Appearance.Button;
+            this.rd3D.BackColor = System.Drawing.Color.Cyan;
+            this.rd3D.Location = new System.Drawing.Point(143, 84);
+            this.rd3D.Name = "rd3D";
+            this.rd3D.Size = new System.Drawing.Size(32, 24);
+            this.rd3D.TabIndex = 13;
+            this.rd3D.TabStop = true;
+            this.rd3D.Text = "3D";
+            this.rd3D.UseVisualStyleBackColor = false;
+            this.rd3D.CheckedChanged += new System.EventHandler(this.rd2D_CheckedChanged);
             // 
             // cbMaPhongChieu
             // 
@@ -194,7 +195,8 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(445, 147);
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.Location = new System.Drawing.Point(534, 143);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(75, 30);
             this.btnUpdate.TabIndex = 9;
@@ -204,7 +206,8 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(607, 147);
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Location = new System.Drawing.Point(696, 143);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 30);
             this.btnClose.TabIndex = 10;
@@ -214,7 +217,8 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(364, 147);
+            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAdd.Location = new System.Drawing.Point(453, 143);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 30);
             this.btnAdd.TabIndex = 11;
@@ -224,7 +228,8 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(526, 147);
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Location = new System.Drawing.Point(615, 143);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 30);
             this.btnDelete.TabIndex = 12;
@@ -286,25 +291,27 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Location = new System.Drawing.Point(12, 9);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(345, 149);
+            this.groupBox2.Size = new System.Drawing.Size(384, 149);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin rạp phim:";
             // 
             // dgvPhongChieu
             // 
+            this.dgvPhongChieu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPhongChieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPhongChieu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvPhongChieu.Location = new System.Drawing.Point(0, 183);
+            this.dgvPhongChieu.Location = new System.Drawing.Point(0, 179);
             this.dgvPhongChieu.Name = "dgvPhongChieu";
-            this.dgvPhongChieu.Size = new System.Drawing.Size(699, 210);
+            this.dgvPhongChieu.Size = new System.Drawing.Size(794, 293);
             this.dgvPhongChieu.TabIndex = 17;
+            this.dgvPhongChieu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongChieu_CellContentClick);
             // 
             // QuanLyPhongChieu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(699, 393);
+            this.ClientSize = new System.Drawing.Size(794, 472);
             this.Controls.Add(this.dgvPhongChieu);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label8);
@@ -313,10 +320,10 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "QuanLyPhongChieu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RapPhim";
+            this.Text = "Quản lý phòng chiếu phim";
             this.Load += new System.EventHandler(this.RapPhim_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
