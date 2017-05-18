@@ -22,8 +22,6 @@ namespace Review
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            dgvLichChieu.DataSource = GetData.GetLichChieu().Tables[0];
-
             cbTenRapPhim.DataSource = GetData.GetRapPhim().Tables[0];
             cbTenRapPhim.DisplayMember = "TenRapPhim";
             cbTenRapPhim.ValueMember = "MaRapPhim";
@@ -42,54 +40,25 @@ namespace Review
                 cbGioChieu.Items.Add(i);
             }
 
-            txtMaRapPhim.Text = txtMaPhim.Text = "";
-            cbTenRapPhim.Text = cbTenPhim.Text = "";
+            cbDinhDang.Items.Add("2D");
+            cbDinhDang.Items.Add("3D");
+            cbDinhDang.Items.Add("4DX");
         }
 
         private void cbTenRapPhim_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txtMaRapPhim.Text = cbTenRapPhim.SelectedValue.ToString();
-
-            cbDinhDang.DataSource = GetData.GetPhongChieuDK(cbTenRapPhim.SelectedValue.ToString()).Tables[0];
-            cbDinhDang.DisplayMember = "DinhDang";
-            cbDinhDang.ValueMember = "MaPhongChieu";
-
             dgvLichChieu.DataSource = GetData.GetLichChieuDK(cbTenRapPhim.SelectedValue.ToString()).Tables[0];
 
             cbDinhDang.Text = "";
-        }
-
-        private void cbTenPhim_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txtMaPhim.Text = cbTenPhim.SelectedValue.ToString();
         }
 
         private void cbDinhDang_SelectedIndexChanged(object sender, EventArgs e)
         {
             cbTenPhongChieu.DataSource = GetData.GetPhongChieuDK2(cbTenRapPhim.SelectedValue.ToString(), cbDinhDang.Text).Tables[0];
             cbTenPhongChieu.DisplayMember = "TenPhongChieu";
-            cbTenPhongChieu.ValueMember = "MaPhongChieu";
+            cbTenPhongChieu.ValueMember = "MaPhongChieu"; 
 
-            txtMaPhongChieu.Text = "";
             cbTenPhongChieu.Text = "";
-        }
-
-        private void cbTenPhongChieu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            txtMaPhongChieu.Text = cbTenPhongChieu.SelectedValue.ToString();
-        }
-
-        private void dgvLichChieu_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtMaRapPhim.Text = dgvLichChieu.CurrentRow.Cells[0].Value.ToString().Trim();
-            cbTenRapPhim.Text = dgvLichChieu.CurrentRow.Cells[1].Value.ToString().Trim();
-            txtMaPhongChieu.Text = dgvLichChieu.CurrentRow.Cells[2].Value.ToString().Trim();
-            cbTenPhongChieu.Text = dgvLichChieu.CurrentRow.Cells[3].Value.ToString().Trim();
-            txtMaPhim.Text = dgvLichChieu.CurrentRow.Cells[4].Value.ToString().Trim();
-            cbTenPhim.Text = dgvLichChieu.CurrentRow.Cells[5].Value.ToString().Trim();
-            cbNgayChieu.Text = dgvLichChieu.CurrentRow.Cells[6].Value.ToString().Trim();
-            cbGioChieu.Text = dgvLichChieu.CurrentRow.Cells[7].Value.ToString().Trim();
-            cbDinhDang.Text = dgvLichChieu.CurrentRow.Cells[8].Value.ToString().Trim();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -198,8 +167,16 @@ namespace Review
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
-            FormQuanLy quanly = new FormQuanLy();
-            quanly.Show();
+        }
+
+        private void dgvLichChieu_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            cbTenRapPhim.Text = dgvLichChieu.CurrentRow.Cells[1].Value.ToString().Trim();
+            cbTenPhongChieu.Text = dgvLichChieu.CurrentRow.Cells[3].Value.ToString().Trim();
+            cbTenPhim.Text = dgvLichChieu.CurrentRow.Cells[5].Value.ToString().Trim();
+            cbNgayChieu.Text = dgvLichChieu.CurrentRow.Cells[6].Value.ToString().Trim();
+            cbGioChieu.Text = dgvLichChieu.CurrentRow.Cells[7].Value.ToString().Trim();
+            cbDinhDang.Text = dgvLichChieu.CurrentRow.Cells[8].Value.ToString().Trim();
         }
     }
 }

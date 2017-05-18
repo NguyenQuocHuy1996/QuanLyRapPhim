@@ -28,119 +28,140 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.lbuser = new System.Windows.Forms.Label();
+            this.btnRapPhim = new System.Windows.Forms.Button();
+            this.btnPhongChieu = new System.Windows.Forms.Button();
+            this.btnPhim = new System.Windows.Forms.Button();
+            this.btnLichChieu = new System.Windows.Forms.Button();
+            this.btnNhanVien = new System.Windows.Forms.Button();
+            this.btnBaoCao = new System.Windows.Forms.Button();
+            this.btnDangXuat = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(114, 66);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Quản lý rạp phim";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(132, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(114, 66);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Quản lý phòng chiếu";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(252, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(114, 66);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Quản lý phim";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(372, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(139, 66);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Quản lý lịch chiếu";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(517, 12);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(114, 66);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "Quản lý nhân viên";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(637, 12);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(114, 66);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Báo cáo";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(1263, 12);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 23);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "Đăng xuất";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // lbuser
             // 
-            this.lbuser.BackColor = System.Drawing.Color.Transparent;
-            this.lbuser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbuser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbuser.Location = new System.Drawing.Point(1028, 12);
+            this.lbuser.Location = new System.Drawing.Point(1157, 12);
             this.lbuser.Name = "lbuser";
-            this.lbuser.Size = new System.Drawing.Size(229, 23);
-            this.lbuser.TabIndex = 7;
+            this.lbuser.Size = new System.Drawing.Size(100, 23);
+            this.lbuser.TabIndex = 15;
             this.lbuser.Text = "Xin chào";
-            this.lbuser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lbuser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnRapPhim
+            // 
+            this.btnRapPhim.BackColor = System.Drawing.Color.White;
+            this.btnRapPhim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRapPhim.Image = global::Review.Properties.Resources.IconRapPhim;
+            this.btnRapPhim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRapPhim.Location = new System.Drawing.Point(12, 12);
+            this.btnRapPhim.Name = "btnRapPhim";
+            this.btnRapPhim.Size = new System.Drawing.Size(170, 50);
+            this.btnRapPhim.TabIndex = 8;
+            this.btnRapPhim.Text = "Quản lý rạp phim";
+            this.btnRapPhim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRapPhim.UseVisualStyleBackColor = false;
+            this.btnRapPhim.Click += new System.EventHandler(this.btnRapPhim_Click);
+            // 
+            // btnPhongChieu
+            // 
+            this.btnPhongChieu.BackColor = System.Drawing.Color.White;
+            this.btnPhongChieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhongChieu.Image = global::Review.Properties.Resources.IconPhongChieu;
+            this.btnPhongChieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhongChieu.Location = new System.Drawing.Point(12, 68);
+            this.btnPhongChieu.Name = "btnPhongChieu";
+            this.btnPhongChieu.Size = new System.Drawing.Size(170, 50);
+            this.btnPhongChieu.TabIndex = 9;
+            this.btnPhongChieu.Text = "Quản lý phòng chiếu";
+            this.btnPhongChieu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPhongChieu.UseVisualStyleBackColor = false;
+            this.btnPhongChieu.Click += new System.EventHandler(this.btnPhongChieu_Click);
+            // 
+            // btnPhim
+            // 
+            this.btnPhim.AllowDrop = true;
+            this.btnPhim.BackColor = System.Drawing.Color.White;
+            this.btnPhim.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPhim.Image = global::Review.Properties.Resources.IconPhim1;
+            this.btnPhim.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPhim.Location = new System.Drawing.Point(12, 124);
+            this.btnPhim.Name = "btnPhim";
+            this.btnPhim.Size = new System.Drawing.Size(170, 50);
+            this.btnPhim.TabIndex = 10;
+            this.btnPhim.Text = "Quản lý phim";
+            this.btnPhim.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnPhim.UseVisualStyleBackColor = false;
+            this.btnPhim.Click += new System.EventHandler(this.btnPhim_Click);
+            // 
+            // btnLichChieu
+            // 
+            this.btnLichChieu.BackColor = System.Drawing.Color.White;
+            this.btnLichChieu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLichChieu.Image = global::Review.Properties.Resources.IconLichChieu;
+            this.btnLichChieu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnLichChieu.Location = new System.Drawing.Point(12, 180);
+            this.btnLichChieu.Name = "btnLichChieu";
+            this.btnLichChieu.Size = new System.Drawing.Size(170, 50);
+            this.btnLichChieu.TabIndex = 11;
+            this.btnLichChieu.Text = "Quản lý lịch chiếu";
+            this.btnLichChieu.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnLichChieu.UseVisualStyleBackColor = false;
+            this.btnLichChieu.Click += new System.EventHandler(this.btnLichChieu_Click);
+            // 
+            // btnNhanVien
+            // 
+            this.btnNhanVien.BackColor = System.Drawing.Color.White;
+            this.btnNhanVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNhanVien.Image = global::Review.Properties.Resources.IconNhanVien;
+            this.btnNhanVien.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNhanVien.Location = new System.Drawing.Point(12, 236);
+            this.btnNhanVien.Name = "btnNhanVien";
+            this.btnNhanVien.Size = new System.Drawing.Size(170, 50);
+            this.btnNhanVien.TabIndex = 12;
+            this.btnNhanVien.Text = "Quản lý nhân viên";
+            this.btnNhanVien.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNhanVien.UseVisualStyleBackColor = false;
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
+            // 
+            // btnBaoCao
+            // 
+            this.btnBaoCao.BackColor = System.Drawing.Color.White;
+            this.btnBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaoCao.Image = global::Review.Properties.Resources.IconBaoCao;
+            this.btnBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBaoCao.Location = new System.Drawing.Point(12, 292);
+            this.btnBaoCao.Name = "btnBaoCao";
+            this.btnBaoCao.Size = new System.Drawing.Size(170, 50);
+            this.btnBaoCao.TabIndex = 13;
+            this.btnBaoCao.Text = "Báo cáo";
+            this.btnBaoCao.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnBaoCao.UseVisualStyleBackColor = false;
+            this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Location = new System.Drawing.Point(1263, 8);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(75, 30);
+            this.btnDangXuat.TabIndex = 14;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = true;
             // 
             // FormQuanLy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Review.Properties.Resources.XemGhe1;
+            this.BackgroundImage = global::Review.Properties.Resources.FormQuanLy;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1350, 692);
+            this.Controls.Add(this.btnDangXuat);
+            this.Controls.Add(this.btnBaoCao);
+            this.Controls.Add(this.btnNhanVien);
+            this.Controls.Add(this.btnLichChieu);
+            this.Controls.Add(this.btnPhim);
+            this.Controls.Add(this.btnPhongChieu);
+            this.Controls.Add(this.btnRapPhim);
             this.Controls.Add(this.lbuser);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Name = "FormQuanLy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormQuanLy";
@@ -152,13 +173,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label lbuser;
+        private System.Windows.Forms.Button btnRapPhim;
+        private System.Windows.Forms.Button btnPhongChieu;
+        private System.Windows.Forms.Button btnPhim;
+        private System.Windows.Forms.Button btnLichChieu;
+        private System.Windows.Forms.Button btnNhanVien;
+        private System.Windows.Forms.Button btnBaoCao;
+        private System.Windows.Forms.Button btnDangXuat;
     }
 }

@@ -48,6 +48,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConvertImage.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="QuanLyLichChieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +134,10 @@
     <Compile Include="Ve.Designer.cs">
       <DependentUpon>Ve.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="QuanLyLichChieu.resx">
       <DependentUpon>QuanLyLichChieu.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,16 +156,6 @@
     <EmbeddedResource Include="Phim.resx">
       <DependentUpon>Phim.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="QuanLyNhanVien.resx">
       <DependentUpon>QuanLyNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,15 +201,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\form.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\XemGhe.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\XemGhe1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <COMReference Include="AxShockwaveFlashObjects">
       <Guid>{D27CDB6B-AE6D-11CF-96B8-444553540000}</Guid>
       <VersionMajor>1</VersionMajor>
@@ -247,7 +237,55 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\IconRapPhim.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormQuanLy.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconPhongChieu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconLichChieu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconPhim.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconNhanVien.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconBaoCao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconPhim1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconSua.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconThem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconXoa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FormChinh.jpg" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\RapPhim.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconClose.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconRapPhim %282%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IconXoa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PhongChieu.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

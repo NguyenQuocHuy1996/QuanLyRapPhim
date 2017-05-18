@@ -34,12 +34,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cbMaRapPhim = new System.Windows.Forms.ComboBox();
             this.cbTenNhanVien = new System.Windows.Forms.ComboBox();
             this.txtTenRapPhim = new System.Windows.Forms.TextBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtMaNhanVien = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtMaRP = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
@@ -47,6 +48,7 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRapPhim)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvRapPhim
@@ -56,9 +58,9 @@
             this.dgvRapPhim.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgvRapPhim.Location = new System.Drawing.Point(0, 0);
             this.dgvRapPhim.Name = "dgvRapPhim";
-            this.dgvRapPhim.Size = new System.Drawing.Size(455, 472);
+            this.dgvRapPhim.Size = new System.Drawing.Size(655, 472);
             this.dgvRapPhim.TabIndex = 0;
-            this.dgvRapPhim.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRapPhim_CellContentClick);
+            this.dgvRapPhim.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRapPhim_CellClick);
             // 
             // label1
             // 
@@ -73,7 +75,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 154);
+            this.label2.Location = new System.Drawing.Point(6, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(100, 23);
             this.label2.TabIndex = 2;
@@ -103,27 +105,19 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 181);
+            this.label5.Location = new System.Drawing.Point(6, 134);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(100, 23);
             this.label5.TabIndex = 5;
             this.label5.Text = "Mã nhân viên quản lý:";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // cbMaRapPhim
-            // 
-            this.cbMaRapPhim.FormattingEnabled = true;
-            this.cbMaRapPhim.Location = new System.Drawing.Point(112, 11);
-            this.cbMaRapPhim.Name = "cbMaRapPhim";
-            this.cbMaRapPhim.Size = new System.Drawing.Size(100, 21);
-            this.cbMaRapPhim.TabIndex = 6;
-            this.cbMaRapPhim.SelectedIndexChanged += new System.EventHandler(this.cbMaRapPhim_SelectedIndexChanged);
-            // 
             // cbTenNhanVien
             // 
+            this.cbTenNhanVien.BackColor = System.Drawing.Color.White;
             this.cbTenNhanVien.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTenNhanVien.FormattingEnabled = true;
-            this.cbTenNhanVien.Location = new System.Drawing.Point(112, 156);
+            this.cbTenNhanVien.Location = new System.Drawing.Point(112, 109);
             this.cbTenNhanVien.Name = "cbTenNhanVien";
             this.cbTenNhanVien.Size = new System.Drawing.Size(205, 21);
             this.cbTenNhanVien.TabIndex = 7;
@@ -143,12 +137,13 @@
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDiaChi.Size = new System.Drawing.Size(205, 86);
+            this.txtDiaChi.Size = new System.Drawing.Size(205, 39);
             this.txtDiaChi.TabIndex = 9;
             // 
             // txtMaNhanVien
             // 
-            this.txtMaNhanVien.Location = new System.Drawing.Point(112, 183);
+            this.txtMaNhanVien.BackColor = System.Drawing.Color.White;
+            this.txtMaNhanVien.Location = new System.Drawing.Point(112, 136);
             this.txtMaNhanVien.Name = "txtMaNhanVien";
             this.txtMaNhanVien.ReadOnly = true;
             this.txtMaNhanVien.Size = new System.Drawing.Size(100, 20);
@@ -156,10 +151,12 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
+            this.groupBox1.Controls.Add(this.pictureBox1);
+            this.groupBox1.Controls.Add(this.txtMaRP);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.btnClose);
-            this.groupBox1.Controls.Add(this.cbMaRapPhim);
             this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtDiaChi);
@@ -172,11 +169,28 @@
             this.groupBox1.Controls.Add(this.cbTenNhanVien);
             this.groupBox1.Controls.Add(this.txtTenRapPhim);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox1.Location = new System.Drawing.Point(461, 0);
+            this.groupBox1.Location = new System.Drawing.Point(661, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(333, 472);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Review.Properties.Resources.RapPhim;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 264);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(321, 208);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtMaRP
+            // 
+            this.txtMaRP.Location = new System.Drawing.Point(112, 11);
+            this.txtMaRP.Name = "txtMaRP";
+            this.txtMaRP.Size = new System.Drawing.Size(100, 20);
+            this.txtMaRP.TabIndex = 15;
             // 
             // btnClear
             // 
@@ -190,41 +204,53 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(6, 207);
+            this.btnAdd.Image = global::Review.Properties.Resources.IconThem;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.Location = new System.Drawing.Point(25, 162);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 33);
+            this.btnAdd.Size = new System.Drawing.Size(95, 45);
             this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "Thêm";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(249, 207);
+            this.btnClose.Image = global::Review.Properties.Resources.IconClose;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.Location = new System.Drawing.Point(227, 213);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 33);
+            this.btnClose.Size = new System.Drawing.Size(95, 45);
             this.btnClose.TabIndex = 14;
             this.btnClose.Text = "Đóng";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(168, 207);
+            this.btnDelete.Image = global::Review.Properties.Resources.IconXoa1;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.Location = new System.Drawing.Point(227, 162);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 33);
+            this.btnDelete.Size = new System.Drawing.Size(95, 45);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(87, 207);
+            this.btnUpdate.Image = global::Review.Properties.Resources.IconSua;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.Location = new System.Drawing.Point(126, 162);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(75, 33);
+            this.btnUpdate.Size = new System.Drawing.Size(95, 45);
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -232,17 +258,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 472);
+            this.ClientSize = new System.Drawing.Size(994, 472);
             this.Controls.Add(this.dgvRapPhim);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "QuanLyRapPhim";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý rạp chiếu phim";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.QuanLyRapPhim_FormClosing);
             this.Load += new System.EventHandler(this.QuanLyRapPhim_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRapPhim)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,7 +283,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cbMaRapPhim;
         private System.Windows.Forms.ComboBox cbTenNhanVien;
         private System.Windows.Forms.TextBox txtTenRapPhim;
         private System.Windows.Forms.TextBox txtDiaChi;
@@ -266,5 +293,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.TextBox txtMaRP;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

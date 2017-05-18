@@ -37,14 +37,6 @@ namespace Review
             cbGioiTinh.Items.Add("Nam");
             cbGioiTinh.Items.Add("Nữ");
 
-            cbMaNhanVien.DataSource = GetData.GetNhanVien().Tables[0];
-            cbMaNhanVien.DisplayMember = "MaNV";
-            cbMaNhanVien.ValueMember = "MaNV";
-
-            cbTenNhanVien.DataSource = GetData.GetNhanVien().Tables[0];
-            cbTenNhanVien.DisplayMember = "TenNV";
-            cbTenNhanVien.ValueMember = "MaNV";
-
             cbChucVu.DataSource = GetData.GetChucVu().Tables[0];
             cbChucVu.DisplayMember = "ChucVu";
         }
@@ -56,8 +48,8 @@ namespace Review
                 string MaNV, TenNV, NgaySinh, GioiTinh, DiaChi, Email, ChucVu, NgayVaoLam;
                 int SDT, SoCMND;
 
-                MaNV = Convert.ToString(cbMaNhanVien.Text);
-                TenNV = Convert.ToString(cbTenNhanVien.Text);
+                MaNV = Convert.ToString(txtMaNV.Text);
+                TenNV = Convert.ToString(txtTenNV.Text);
                 NgaySinh = Convert.ToString(txtNgaySinh.Text);
                 SoCMND = Convert.ToInt32(txtCMND.Text);
                 GioiTinh = Convert.ToString(cbGioiTinh.Text);
@@ -91,8 +83,8 @@ namespace Review
                 string MaNV, TenNV, NgaySinh, GioiTinh, DiaChi, Email, ChucVu, NgayVaoLam;
                 int SDT, SoCMND;
 
-                MaNV = Convert.ToString(cbMaNhanVien.Text);
-                TenNV = Convert.ToString(cbTenNhanVien.Text);
+                MaNV = Convert.ToString(txtMaNV.Text);
+                TenNV = Convert.ToString(txtTenNV.Text);
                 NgaySinh = Convert.ToString(txtNgaySinh.Text);
                 SoCMND = Convert.ToInt32(txtCMND.Text);
                 GioiTinh = Convert.ToString(cbGioiTinh.Text);
@@ -127,8 +119,8 @@ namespace Review
                 string MaNV, TenNV, NgaySinh, GioiTinh, DiaChi, Email, ChucVu, NgayVaoLam;
                 int SDT, SoCMND;
 
-                MaNV = Convert.ToString(cbMaNhanVien.Text);
-                TenNV = Convert.ToString(cbTenNhanVien.Text);
+                MaNV = Convert.ToString(txtMaNV.Text);
+                TenNV = Convert.ToString(txtTenNV.Text);
                 NgaySinh = Convert.ToString(txtNgaySinh.Text);
                 SoCMND = Convert.ToInt32(txtCMND.Text);
                 GioiTinh = Convert.ToString(cbGioiTinh.Text);
@@ -158,15 +150,19 @@ namespace Review
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
-            FormQuanLy quanly = new FormQuanLy();
-            quanly.Show();
+            Close();       
         }
 
-        private void dgvNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
-            cbMaNhanVien.Text = dgvNhanVien.CurrentRow.Cells[0].Value.ToString().Trim();
-            cbTenNhanVien.Text = dgvNhanVien.CurrentRow.Cells[1].Value.ToString().Trim();
+            txtCMND.Text = txtSoDT.Text = txtNgaySinh.Text = txtNgayVaoLam.Text = txtEmail.Text = txtDiaChi.Text = "";
+            txtMaNV.Text = txtTenNV.Text = cbGioiTinh.Text = cbChucVu.Text = "";
+        }
+
+        private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaNV.Text = dgvNhanVien.CurrentRow.Cells[0].Value.ToString().Trim();
+            txtTenNV.Text = dgvNhanVien.CurrentRow.Cells[1].Value.ToString().Trim();
             txtNgaySinh.Text = dgvNhanVien.CurrentRow.Cells[2].Value.ToString().Trim();
             cbGioiTinh.Text = dgvNhanVien.CurrentRow.Cells[3].Value.ToString().Trim();
             txtCMND.Text = dgvNhanVien.CurrentRow.Cells[4].Value.ToString().Trim();
@@ -175,32 +171,6 @@ namespace Review
             txtEmail.Text = dgvNhanVien.CurrentRow.Cells[7].Value.ToString().Trim();
             cbChucVu.Text = dgvNhanVien.CurrentRow.Cells[8].Value.ToString().Trim();
             txtNgayVaoLam.Text = dgvNhanVien.CurrentRow.Cells[9].Value.ToString().Trim();
-        }
-
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            txtCMND.Text = txtSoDT.Text = txtNgaySinh.Text = txtNgayVaoLam.Text = txtEmail.Text = txtDiaChi.Text = "";
-            cbMaNhanVien.Text = cbTenNhanVien.Text = cbGioiTinh.Text = cbChucVu.Text = "";
-        }
-
-        private void cbMaNhanVien_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int index = cbMaNhanVien.SelectedIndex;
-            cbTenNhanVien.Text = dgvNhanVien.Rows[index].Cells[1].Value.ToString().Trim();
-            txtNgaySinh.Text = dgvNhanVien.Rows[index].Cells[2].Value.ToString().Trim();
-            cbGioiTinh.Text = dgvNhanVien.Rows[index].Cells[3].Value.ToString().Trim();
-            txtCMND.Text = dgvNhanVien.Rows[index].Cells[4].Value.ToString().Trim();
-            txtDiaChi.Text = dgvNhanVien.Rows[index].Cells[5].Value.ToString().Trim();
-            txtSoDT.Text = dgvNhanVien.Rows[index].Cells[6].Value.ToString().Trim();
-            txtEmail.Text = dgvNhanVien.Rows[index].Cells[7].Value.ToString().Trim();
-            cbChucVu.Text = dgvNhanVien.Rows[index].Cells[8].Value.ToString().Trim();
-            txtNgayVaoLam.Text = dgvNhanVien.Rows[index].Cells[9].Value.ToString().Trim();
-
-        }
-
-        private void cbTenNhanVien_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

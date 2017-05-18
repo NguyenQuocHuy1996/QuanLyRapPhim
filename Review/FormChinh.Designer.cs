@@ -123,7 +123,7 @@
             this.btnDepositTicket.Name = "btnDepositTicket";
             this.btnDepositTicket.Size = new System.Drawing.Size(75, 23);
             this.btnDepositTicket.TabIndex = 10;
-            this.btnDepositTicket.Text = "Đặt vé";
+            this.btnDepositTicket.Text = "Mua vé";
             this.btnDepositTicket.UseVisualStyleBackColor = true;
             this.btnDepositTicket.Click += new System.EventHandler(this.btnDepositTicket_Click);
             // 
@@ -154,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Review.Properties.Resources.form;
+            this.BackgroundImage = global::Review.Properties.Resources.FormChinh;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1350, 692);
             this.Controls.Add(this.btnLogOut);

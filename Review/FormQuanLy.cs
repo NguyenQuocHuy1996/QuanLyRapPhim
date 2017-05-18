@@ -22,32 +22,9 @@ namespace Review
             lbuser.Text += " " + taikhoan;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void FormQuanLy_FormClosing(object sender, FormClosingEventArgs e)
         {
-            QuanLyPhim formPhim = new QuanLyPhim();
-            formPhim.Show();
-            this.Hide();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            QuanLyLichChieu formLichChieu = new QuanLyLichChieu();
-            formLichChieu.Show();
-            this.Hide();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            QuanLyRapPhim formRapPhim = new QuanLyRapPhim();
-            formRapPhim.Show();
-            this.Hide();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            QuanLyPhongChieu formPhongChieu = new QuanLyPhongChieu();
-            formPhongChieu.Show();
-            this.Hide();
+            Application.Exit();
         }
 
         private void FormQuanLy_Load(object sender, EventArgs e)
@@ -55,27 +32,40 @@ namespace Review
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnRapPhim_Click(object sender, EventArgs e)
         {
-            QuanLyNhanVien show = new QuanLyNhanVien();
-            show.Show();
-            this.Hide();
+            QuanLyRapPhim RapPhim = new QuanLyRapPhim();
+            RapPhim.Show();
         }
 
-        private void FormQuanLy_FormClosing(object sender, FormClosingEventArgs e)
+        private void btnPhongChieu_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            QuanLyPhongChieu PhongChieu = new QuanLyPhongChieu();
+            PhongChieu.Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnPhim_Click(object sender, EventArgs e)
         {
-            this.Close();
+            QuanLyPhim Phim = new QuanLyPhim();
+            Phim.Show();
         }
-        // Button Report Clicked
-        private void button6_Click(object sender, EventArgs e)
+
+        private void btnLichChieu_Click(object sender, EventArgs e)
         {
-            Report form = new Report();
-            form.ShowDialog();
+            QuanLyLichChieu LichChieu = new QuanLyLichChieu();
+            LichChieu.Show();
+        }
+
+        private void btnNhanVien_Click(object sender, EventArgs e)
+        {
+            QuanLyNhanVien NhanVien = new QuanLyNhanVien();
+            NhanVien.Show();
+        }
+
+        private void btnBaoCao_Click(object sender, EventArgs e)
+        {
+            Report Report = new Report();
+            Report.Show();
         }
     }
 }

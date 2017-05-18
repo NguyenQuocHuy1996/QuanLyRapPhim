@@ -30,13 +30,13 @@
         {
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.cbTenNhanVien = new System.Windows.Forms.ComboBox();
-            this.cbMaNhanVien = new System.Windows.Forms.ComboBox();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtNgaySinh = new System.Windows.Forms.TextBox();
@@ -68,20 +68,20 @@
             this.dgvNhanVien.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvNhanVien.Location = new System.Drawing.Point(0, 0);
             this.dgvNhanVien.Name = "dgvNhanVien";
-            this.dgvNhanVien.Size = new System.Drawing.Size(994, 393);
+            this.dgvNhanVien.Size = new System.Drawing.Size(994, 460);
             this.dgvNhanVien.TabIndex = 0;
-            this.dgvNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellContentClick);
+            this.dgvNhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNhanVien_CellClick);
             // 
             // groupBox1
             // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
+            this.groupBox1.Controls.Add(this.txtMaNV);
+            this.groupBox1.Controls.Add(this.txtTenNV);
             this.groupBox1.Controls.Add(this.btnRefresh);
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.btnDelete);
             this.groupBox1.Controls.Add(this.btnUpdate);
             this.groupBox1.Controls.Add(this.btnAdd);
-            this.groupBox1.Controls.Add(this.cbTenNhanVien);
-            this.groupBox1.Controls.Add(this.cbMaNhanVien);
             this.groupBox1.Controls.Add(this.cbGioiTinh);
             this.groupBox1.Controls.Add(this.txtDiaChi);
             this.groupBox1.Controls.Add(this.txtNgaySinh);
@@ -100,15 +100,30 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 399);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.groupBox1.Location = new System.Drawing.Point(0, 454);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(456, 261);
+            this.groupBox1.Size = new System.Drawing.Size(994, 218);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // txtMaNV
+            // 
+            this.txtMaNV.Location = new System.Drawing.Point(91, 13);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(108, 20);
+            this.txtMaNV.TabIndex = 56;
+            // 
+            // txtTenNV
+            // 
+            this.txtTenNV.Location = new System.Drawing.Point(91, 38);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(274, 20);
+            this.txtTenNV.TabIndex = 55;
+            // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(394, 13);
+            this.btnRefresh.Location = new System.Drawing.Point(205, 10);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(55, 23);
             this.btnRefresh.TabIndex = 3;
@@ -118,126 +133,120 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(286, 218);
+            this.btnClose.Image = global::Review.Properties.Resources.IconClose;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnClose.Location = new System.Drawing.Point(872, 167);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(60, 37);
+            this.btnClose.Size = new System.Drawing.Size(110, 45);
             this.btnClose.TabIndex = 2;
             this.btnClose.Text = "Đóng";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(220, 218);
+            this.btnDelete.Image = global::Review.Properties.Resources.IconXoa1;
+            this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDelete.Location = new System.Drawing.Point(872, 116);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(60, 37);
+            this.btnDelete.Size = new System.Drawing.Size(110, 45);
             this.btnDelete.TabIndex = 54;
             this.btnDelete.Text = "Xóa";
+            this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(154, 218);
+            this.btnUpdate.Image = global::Review.Properties.Resources.IconSua;
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnUpdate.Location = new System.Drawing.Point(872, 65);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(60, 37);
+            this.btnUpdate.Size = new System.Drawing.Size(110, 45);
             this.btnUpdate.TabIndex = 53;
             this.btnUpdate.Text = "Sửa";
+            this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(88, 218);
+            this.btnAdd.Image = global::Review.Properties.Resources.IconThem;
+            this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAdd.Location = new System.Drawing.Point(872, 14);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(60, 37);
+            this.btnAdd.Size = new System.Drawing.Size(110, 45);
             this.btnAdd.TabIndex = 52;
             this.btnAdd.Text = "Thêm";
+            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // cbTenNhanVien
-            // 
-            this.cbTenNhanVien.FormattingEnabled = true;
-            this.cbTenNhanVien.Location = new System.Drawing.Point(282, 13);
-            this.cbTenNhanVien.Name = "cbTenNhanVien";
-            this.cbTenNhanVien.Size = new System.Drawing.Size(106, 21);
-            this.cbTenNhanVien.TabIndex = 51;
-            this.cbTenNhanVien.SelectedIndexChanged += new System.EventHandler(this.cbTenNhanVien_SelectedIndexChanged);
-            // 
-            // cbMaNhanVien
-            // 
-            this.cbMaNhanVien.FormattingEnabled = true;
-            this.cbMaNhanVien.Location = new System.Drawing.Point(85, 13);
-            this.cbMaNhanVien.Name = "cbMaNhanVien";
-            this.cbMaNhanVien.Size = new System.Drawing.Size(106, 21);
-            this.cbMaNhanVien.TabIndex = 50;
-            this.cbMaNhanVien.SelectedIndexChanged += new System.EventHandler(this.cbMaNhanVien_SelectedIndexChanged);
             // 
             // cbGioiTinh
             // 
             this.cbGioiTinh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbGioiTinh.Location = new System.Drawing.Point(282, 38);
+            this.cbGioiTinh.Location = new System.Drawing.Point(426, 64);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(106, 21);
             this.cbGioiTinh.TabIndex = 49;
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(85, 144);
+            this.txtDiaChi.Location = new System.Drawing.Point(90, 116);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(303, 68);
+            this.txtDiaChi.Size = new System.Drawing.Size(274, 68);
             this.txtDiaChi.TabIndex = 48;
             // 
             // txtNgaySinh
             // 
-            this.txtNgaySinh.Location = new System.Drawing.Point(85, 39);
+            this.txtNgaySinh.Location = new System.Drawing.Point(91, 64);
             this.txtNgaySinh.Name = "txtNgaySinh";
             this.txtNgaySinh.Size = new System.Drawing.Size(106, 20);
             this.txtNgaySinh.TabIndex = 45;
             // 
             // txtCMND
             // 
-            this.txtCMND.Location = new System.Drawing.Point(282, 65);
+            this.txtCMND.Location = new System.Drawing.Point(251, 64);
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(106, 20);
+            this.txtCMND.Size = new System.Drawing.Size(113, 20);
             this.txtCMND.TabIndex = 44;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(85, 91);
+            this.txtEmail.Location = new System.Drawing.Point(251, 90);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(303, 20);
+            this.txtEmail.Size = new System.Drawing.Size(113, 20);
             this.txtEmail.TabIndex = 43;
             // 
             // txtSoDT
             // 
-            this.txtSoDT.Location = new System.Drawing.Point(85, 65);
+            this.txtSoDT.Location = new System.Drawing.Point(91, 90);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.Size = new System.Drawing.Size(106, 20);
             this.txtSoDT.TabIndex = 42;
             // 
             // txtNgayVaoLam
             // 
-            this.txtNgayVaoLam.Location = new System.Drawing.Point(297, 118);
+            this.txtNgayVaoLam.Location = new System.Drawing.Point(618, 91);
             this.txtNgayVaoLam.Name = "txtNgayVaoLam";
-            this.txtNgayVaoLam.Size = new System.Drawing.Size(91, 20);
+            this.txtNgayVaoLam.Size = new System.Drawing.Size(182, 20);
             this.txtNgayVaoLam.TabIndex = 40;
             // 
             // cbChucVu
             // 
             this.cbChucVu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbChucVu.FormattingEnabled = true;
-            this.cbChucVu.Location = new System.Drawing.Point(85, 117);
+            this.cbChucVu.Location = new System.Drawing.Point(618, 64);
             this.cbChucVu.Name = "cbChucVu";
-            this.cbChucVu.Size = new System.Drawing.Size(129, 21);
+            this.cbChucVu.Size = new System.Drawing.Size(182, 21);
             this.cbChucVu.TabIndex = 38;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(217, 121);
+            this.label10.Location = new System.Drawing.Point(538, 94);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(75, 13);
             this.label10.TabIndex = 35;
@@ -246,7 +255,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 94);
+            this.label9.Location = new System.Drawing.Point(203, 69);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 34;
@@ -255,7 +264,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 120);
+            this.label8.Location = new System.Drawing.Point(538, 67);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 13);
             this.label8.TabIndex = 33;
@@ -264,7 +273,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 68);
+            this.label7.Location = new System.Drawing.Point(6, 93);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 13);
             this.label7.TabIndex = 32;
@@ -273,7 +282,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 147);
+            this.label6.Location = new System.Drawing.Point(6, 119);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 13);
             this.label6.TabIndex = 31;
@@ -282,7 +291,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(197, 68);
+            this.label5.Location = new System.Drawing.Point(203, 93);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 13);
             this.label5.TabIndex = 30;
@@ -291,7 +300,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(197, 42);
+            this.label4.Location = new System.Drawing.Point(370, 67);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 29;
@@ -300,7 +309,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 41);
+            this.label3.Location = new System.Drawing.Point(6, 67);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 28;
@@ -309,7 +318,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(197, 16);
+            this.label2.Location = new System.Drawing.Point(6, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 13);
             this.label2.TabIndex = 27;
@@ -365,12 +374,12 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cbTenNhanVien;
-        private System.Windows.Forms.ComboBox cbMaNhanVien;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.TextBox txtMaNV;
+        private System.Windows.Forms.TextBox txtTenNV;
     }
 }

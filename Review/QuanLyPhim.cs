@@ -33,34 +33,34 @@ namespace Review
             dgvPhim.Columns[6].HeaderText = "Thể loại";
             dgvPhim.Columns[7].HeaderText = "Hình ảnh";
 
-            cbMaPhim.DataSource = GetData.GetPhim().Tables[0];
-            cbMaPhim.DisplayMember = "MaPhim";
-            cbMaPhim.ValueMember = "MaPhim";
-
             cbTheLoai.DataSource = GetData.GetTheLoai().Tables[0];
             cbTheLoai.DisplayMember = "TheLoai";
 
             //cbMaPhim.Text= txtTenPhim.Text = txtDaoDien.Text = txtThoiLuong.Text = txtNam.Text = txtQuocGia.Text = cbTheLoai.Text = "";
         }
 
-        private void cbMaPhim_SelectedIndexChanged(object sender, EventArgs e)
+        private void dgvPhim_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //Tao 1 doi tuong  Phim moi
-            GetOneDataBUS np = new GetOneDataBUS();
-            PhimDTO phim = np.GetOnePhimBUS(cbMaPhim.Text);
-
-            int index = cbMaPhim.SelectedIndex;
-            //Thong tin phim
-            cbMaPhim.Text = phim.MaPhim;
-            txtTenPhim.Text = phim.TenPhim;
-            txtDaoDien.Text = phim.DaoDien;
-            txtQuocGia.Text = phim.QuocGia;
-            txtNam.Text = phim.Nam.ToString();
-            txtThoiLuong.Text = phim.ThoiLuong.ToString();
-            cbTheLoai.Text = phim.TheLoai;
-
-            //Lay Hinh
-            //picImage.Image = ConvertImage.ConvertByteToImage(phim.HinhAnh);
+            try
+            {
+                picImage.Visible = true;
+                txtMaPhim.Text = dgvPhim.CurrentRow.Cells[0].Value.ToString().Trim();
+                txtTenPhim.Text = dgvPhim.CurrentRow.Cells[1].Value.ToString().Trim();
+                txtDaoDien.Text = dgvPhim.CurrentRow.Cells[2].Value.ToString().Trim();
+                txtQuocGia.Text = dgvPhim.CurrentRow.Cells[3].Value.ToString().Trim();
+                txtNam.Text = dgvPhim.CurrentRow.Cells[4].Value.ToString().Trim();
+                txtThoiLuong.Text = dgvPhim.CurrentRow.Cells[5].Value.ToString().Trim();
+                cbTheLoai.Text = dgvPhim.CurrentRow.Cells[6].Value.ToString().Trim();
+                //Tao 1 doi tuong  Phim moi
+                GetOneDataBUS np = new GetOneDataBUS();
+                PhimDTO phim = np.GetOnePhimBUS(txtMaPhim.Text);
+                //Lay Hinh
+                picImage.Image = ConvertImage.ConvertByteToImage(phim.HinhAnh);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Không có thông tin phim");
+            }
         }
 
         private void btnChonAnh_Click(object sender, EventArgs e)
@@ -83,7 +83,7 @@ namespace Review
                 int nam, thoiLuong;
                 byte[] hinhAnh;
 
-                maPhim = Convert.ToString(cbMaPhim.Text);
+                maPhim = Convert.ToString(txtMaPhim.Text);
                 tenPhim = Convert.ToString(txtTenPhim.Text);
                 daoDien = Convert.ToString(txtDaoDien.Text);
                 quocGia = Convert.ToString(txtQuocGia.Text);
@@ -96,14 +96,11 @@ namespace Review
                 int themphim = new ThemBUS().Them_PhimBUS(film);
 
                 dgvPhim.DataSource = GetData.GetPhim().Tables[0];
-                cbMaPhim.DataSource = GetData.GetPhim().Tables[0];
-                cbMaPhim.Text = txtTenPhim.Text = txtDaoDien.Text = txtQuocGia.Text = cbTheLoai.Text = txtNam.Text = txtThoiLuong.Text = "";
-                MessageBox.Show("Thêm phim thành công");
+                MessageBox.Show("Thêm phim thành công");                
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
-                MessageBox.Show(ex.Message);
-                //MessageBox.Show("Mã phim đã có, nhập mã khác");
+                MessageBox.Show("Mã phim đã có, nhập mã khác");
             }
             catch (Exception)
             {
@@ -119,7 +116,7 @@ namespace Review
                 int nam, thoiLuong;
                 byte[] hinhAnh;
 
-                maPhim = Convert.ToString(cbMaPhim.Text);
+                maPhim = Convert.ToString(txtMaPhim.Text);
                 tenPhim = Convert.ToString(txtTenPhim.Text);
                 daoDien = Convert.ToString(txtDaoDien.Text);
                 quocGia = Convert.ToString(txtQuocGia.Text);
@@ -132,16 +129,15 @@ namespace Review
                 int suaphim = new SuaBUS().SuaPhimBUS(film);
 
                 dgvPhim.DataSource = GetData.GetPhim().Tables[0];
-                cbMaPhim.Text = txtTenPhim.Text = txtDaoDien.Text = txtQuocGia.Text = cbTheLoai.Text = txtNam.Text = txtThoiLuong.Text = txtHinhAnh.Text = "";
                 MessageBox.Show("Sửa phim thành công");
             }
-            catch (SqlException ex)
+            catch (SqlException)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Mã phim không tìm thấy, nhập mã khác");
             }
             catch (Exception)
             {
-                MessageBox.Show("Chọn hình ảnh");
+               MessageBox.Show("Điền đầy đủ thông tin");
             }
             
         }
@@ -153,7 +149,7 @@ namespace Review
                 string maPhim, tenPhim, daoDien, quocGia, theLoai;
                 int nam, thoiLuong;
 
-                maPhim = Convert.ToString(cbMaPhim.Text);
+                maPhim = Convert.ToString(txtMaPhim.Text);
                 tenPhim = Convert.ToString(txtTenPhim.Text);
                 daoDien = Convert.ToString(txtDaoDien.Text);
                 quocGia = Convert.ToString(txtQuocGia.Text);
@@ -165,8 +161,8 @@ namespace Review
                 int xoaphim = new XoaBUS().Xoa_PhimBUS(film);
 
                 dgvPhim.DataSource = GetData.GetPhim().Tables[0];
-                cbMaPhim.DataSource = GetData.GetPhim().Tables[0];
-                cbMaPhim.Text = txtTenPhim.Text = txtDaoDien.Text = txtQuocGia.Text = cbTheLoai.Text = txtNam.Text = txtThoiLuong.Text = txtHinhAnh.Text = "";
+                txtMaPhim.Text = txtTenPhim.Text = txtDaoDien.Text = txtQuocGia.Text = cbTheLoai.Text = txtNam.Text = txtThoiLuong.Text = txtHinhAnh.Text = "";
+                picImage.Visible = false;
                 MessageBox.Show("Xóa phim thành công");
             }
             catch (SqlException ex)
@@ -182,8 +178,6 @@ namespace Review
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
-            FormQuanLy quanly = new FormQuanLy();
-            quanly.Show();
         }
 
         private void dgvPhim_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -193,25 +187,14 @@ namespace Review
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            cbMaPhim.Text = "";
-            txtTenPhim.Text = txtDaoDien.Text = txtNam.Text = txtQuocGia.Text = txtThoiLuong.Text = "";
+            txtMaPhim.Text = txtTenPhim.Text = txtDaoDien.Text = txtNam.Text = txtQuocGia.Text = txtThoiLuong.Text = txtHinhAnh.Text ="";
+            picImage.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Phim form = new Phim();
             form.Show();
-        }
-
-        private void dgvPhim_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            cbMaPhim.Text = dgvPhim.CurrentRow.Cells[0].Value.ToString().Trim();
-            txtTenPhim.Text = dgvPhim.CurrentRow.Cells[1].Value.ToString().Trim();
-            txtDaoDien.Text = dgvPhim.CurrentRow.Cells[2].Value.ToString().Trim();
-            txtQuocGia.Text = dgvPhim.CurrentRow.Cells[3].Value.ToString().Trim();
-            txtNam.Text = dgvPhim.CurrentRow.Cells[4].Value.ToString().Trim();
-            txtThoiLuong.Text = dgvPhim.CurrentRow.Cells[5].Value.ToString().Trim();
-            cbTheLoai.Text = dgvPhim.CurrentRow.Cells[6].Value.ToString().Trim();
         }
     }
 }

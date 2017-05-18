@@ -29,21 +29,10 @@ namespace Review
             dgvRapPhim.Columns[3].HeaderText = "Mã nhân viên";
             dgvRapPhim.Columns[4].HeaderText = "Nhân viên quản lý";
 
-            cbMaRapPhim.DataSource = GetData.GetRapPhim().Tables[0];
-            cbMaRapPhim.DisplayMember = "MaRapPhim";
-            cbMaRapPhim.ValueMember = "MaRapPhim";
-
             cbTenNhanVien.DataSource = GetData.GetNhanVienDK("Quản lý rạp phim").Tables[0];
             cbTenNhanVien.DisplayMember = "TenNV";
             cbTenNhanVien.ValueMember = "MaNV";
             txtMaNhanVien.Text = cbTenNhanVien.SelectedValue.ToString();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-            FormQuanLy quanly = new FormQuanLy();
-            quanly.Show();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -52,7 +41,7 @@ namespace Review
             {
                 string MaRP, TenRP, DiaChi, MaNV, TenNV;
 
-                MaRP = Convert.ToString(cbMaRapPhim.Text);
+                MaRP = Convert.ToString(txtMaRP.Text);
                 TenRP = Convert.ToString(txtTenRapPhim.Text);
                 DiaChi = Convert.ToString(txtDiaChi.Text);
                 MaNV = Convert.ToString(txtMaNhanVien.Text);
@@ -81,7 +70,7 @@ namespace Review
             {
                 string MaRP, TenRP, DiaChi, MaNV, TenNV;
 
-                MaRP = Convert.ToString(cbMaRapPhim.Text);
+                MaRP = Convert.ToString(txtMaRP.Text);
                 TenRP = Convert.ToString(txtTenRapPhim.Text);
                 DiaChi = Convert.ToString(txtDiaChi.Text);
                 MaNV = Convert.ToString(txtMaNhanVien.Text);
@@ -111,7 +100,7 @@ namespace Review
             {
                 string MaRP, TenRP, DiaChi, MaNV, TenNV;
 
-                MaRP = Convert.ToString(cbMaRapPhim.Text);
+                MaRP = Convert.ToString(txtMaRP.Text);
                 TenRP = Convert.ToString(txtTenRapPhim.Text);
                 DiaChi = Convert.ToString(txtDiaChi.Text);
                 MaNV = Convert.ToString(txtMaNhanVien.Text);
@@ -132,16 +121,6 @@ namespace Review
             {
                 MessageBox.Show(ex.Message);
             }
-
-        }
-
-        private void cbMaRapPhim_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            int index = cbMaRapPhim.SelectedIndex;
-            txtTenRapPhim.Text = dgvRapPhim.Rows[index].Cells[1].Value.ToString().Trim();
-            txtDiaChi.Text = dgvRapPhim.Rows[index].Cells[2].Value.ToString().Trim();
-            txtMaNhanVien.Text = dgvRapPhim.Rows[index].Cells[3].Value.ToString().Trim();
-            cbTenNhanVien.Text = dgvRapPhim.Rows[index].Cells[4].Value.ToString().Trim();
         }
 
         private void cbTenNhanVien_SelectedIndexChanged(object sender, EventArgs e)
@@ -149,20 +128,29 @@ namespace Review
             txtMaNhanVien.Text = cbTenNhanVien.SelectedValue.ToString();
         }
 
-        private void dgvRapPhim_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-            cbMaRapPhim.Text = dgvRapPhim.CurrentRow.Cells[0].Value.ToString().Trim();
+            cbTenNhanVien.Text = txtMaRP.Text = "";
+            txtDiaChi.Text = txtMaNhanVien.Text = txtTenRapPhim.Text = "";
+        }
+
+        private void dgvRapPhim_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtMaRP.Text = dgvRapPhim.CurrentRow.Cells[0].Value.ToString().Trim();
             txtTenRapPhim.Text = dgvRapPhim.CurrentRow.Cells[1].Value.ToString().Trim();
             txtDiaChi.Text = dgvRapPhim.CurrentRow.Cells[2].Value.ToString().Trim();
             txtMaNhanVien.Text = dgvRapPhim.CurrentRow.Cells[3].Value.ToString().Trim();
             cbTenNhanVien.Text = dgvRapPhim.CurrentRow.Cells[4].Value.ToString().Trim();
-
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
-            cbTenNhanVien.Text = cbMaRapPhim.Text = "";
-            txtDiaChi.Text = txtMaNhanVien.Text = txtTenRapPhim.Text = "";
+            Close();
+        }
+
+        private void QuanLyRapPhim_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }
