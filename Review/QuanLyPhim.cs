@@ -196,5 +196,11 @@ namespace Review
             Phim form = new Phim();
             form.Show();
         }
+
+        private void btnTheLoai_Click(object sender, EventArgs e)
+        {
+            QuanLyTheLoai TheLoai = new QuanLyTheLoai();
+            TheLoai.Show();
+        }
     }
 }

@@ -110,3 +110,4 @@ C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.exe
 C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.pdb
 C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.Report.resources
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.Report.resources
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.QuanLyTheLoai.resources

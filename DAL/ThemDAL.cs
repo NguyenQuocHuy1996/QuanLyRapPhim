@@ -82,6 +82,23 @@ namespace DAL
             }
         }
 
+        //Them TheLoai
+        public int ThemTheLoaiDAL(TheLoaiDTO TheLoai)
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@TheLoai", TheLoai.TheLoai));
+
+            try
+            {
+                return (dp.executeNonQuery("ThemTheLoai", System.Data.CommandType.StoredProcedure, paras));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
         //Them LichChieu
         public int ThemLichChieuDAL(LichChieuDTO lichchieu)
         {

@@ -15,7 +15,7 @@ namespace Review
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormChinh());
+            Application.Run(new QuanLyPhim());
 
             //Application.Run(new Login());
         }

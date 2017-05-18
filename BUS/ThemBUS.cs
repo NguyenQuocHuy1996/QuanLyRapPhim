@@ -50,11 +50,12 @@ namespace BUS
             }
         }
 
-        public int ThemKhachHangBUS(KhachHangDTO khachhang)
+        //Them TheLoai
+        public int ThemTheLoaiBUS(TheLoaiDTO TheLoai)
         {
             try
             {
-                return (new ThemDAL().ThemKhachHangDAL(khachhang));
+                return (new ThemDAL().ThemTheLoaiDAL(TheLoai));
             }
             catch (SqlException ex)
             {
@@ -106,6 +107,18 @@ namespace BUS
             try
             {
                 return (new ThemDAL().Them_VeDAL(ve));
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int ThemKhachHangBUS(KhachHangDTO khachhang)
+        {
+            try
+            {
+                return (new ThemDAL().ThemKhachHangDAL(khachhang));
             }
             catch (SqlException ex)
             {

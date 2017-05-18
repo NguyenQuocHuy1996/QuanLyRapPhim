@@ -116,6 +116,12 @@
     <Compile Include="QuanLyRapPhim.Designer.cs">
       <DependentUpon>QuanLyRapPhim.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyTheLoai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QuanLyTheLoai.Designer.cs">
+      <DependentUpon>QuanLyTheLoai.cs</DependentUpon>
+    </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="QuanLyRapPhim.resx">
       <DependentUpon>QuanLyRapPhim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTheLoai.resx">
+      <DependentUpon>QuanLyTheLoai.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
