@@ -58,7 +58,7 @@
             this.cbDinhDang.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cbDinhDang.Location = new System.Drawing.Point(122, 77);
             this.cbDinhDang.Name = "cbDinhDang";
-            this.cbDinhDang.Size = new System.Drawing.Size(140, 23);
+            this.cbDinhDang.Size = new System.Drawing.Size(98, 23);
             this.cbDinhDang.TabIndex = 30;
             this.cbDinhDang.SelectedIndexChanged += new System.EventHandler(this.cbDinhDang_SelectedIndexChanged);
             // 
@@ -70,7 +70,7 @@
             this.cbTenPhongChieu.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cbTenPhongChieu.Location = new System.Drawing.Point(122, 107);
             this.cbTenPhongChieu.Name = "cbTenPhongChieu";
-            this.cbTenPhongChieu.Size = new System.Drawing.Size(276, 23);
+            this.cbTenPhongChieu.Size = new System.Drawing.Size(308, 23);
             this.cbTenPhongChieu.TabIndex = 29;
             // 
             // cbTenRapPhim
@@ -81,7 +81,7 @@
             this.cbTenRapPhim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cbTenRapPhim.Location = new System.Drawing.Point(122, 15);
             this.cbTenRapPhim.Name = "cbTenRapPhim";
-            this.cbTenRapPhim.Size = new System.Drawing.Size(276, 23);
+            this.cbTenRapPhim.Size = new System.Drawing.Size(308, 23);
             this.cbTenRapPhim.TabIndex = 24;
             this.cbTenRapPhim.SelectedIndexChanged += new System.EventHandler(this.cbTenRapPhim_SelectedIndexChanged);
             // 
@@ -116,7 +116,7 @@
             // 
             this.btnClose.Image = global::Review.Properties.Resources.IconClose;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(298, 315);
+            this.btnClose.Location = new System.Drawing.Point(330, 215);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(100, 45);
             this.btnClose.TabIndex = 18;
@@ -138,7 +138,7 @@
             // 
             this.btnXoa.Image = global::Review.Properties.Resources.IconXoa1;
             this.btnXoa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnXoa.Location = new System.Drawing.Point(12, 315);
+            this.btnXoa.Location = new System.Drawing.Point(224, 215);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(100, 45);
             this.btnXoa.TabIndex = 16;
@@ -155,7 +155,7 @@
             this.cbTenPhim.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.cbTenPhim.Location = new System.Drawing.Point(122, 46);
             this.cbTenPhim.Name = "cbTenPhim";
-            this.cbTenPhim.Size = new System.Drawing.Size(276, 23);
+            this.cbTenPhim.Size = new System.Drawing.Size(308, 23);
             this.cbTenPhim.TabIndex = 1;
             // 
             // btnThem
@@ -193,7 +193,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(414, 372);
+            this.groupBox1.Size = new System.Drawing.Size(441, 372);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             // 
@@ -228,7 +228,7 @@
             // 
             this.btnSua.Image = global::Review.Properties.Resources.IconSua;
             this.btnSua.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSua.Location = new System.Drawing.Point(12, 266);
+            this.btnSua.Location = new System.Drawing.Point(118, 215);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(100, 45);
             this.btnSua.TabIndex = 31;
@@ -250,9 +250,9 @@
             // 
             this.dgvLichChieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLichChieu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvLichChieu.Location = new System.Drawing.Point(421, 0);
+            this.dgvLichChieu.Location = new System.Drawing.Point(447, 0);
             this.dgvLichChieu.Name = "dgvLichChieu";
-            this.dgvLichChieu.Size = new System.Drawing.Size(855, 372);
+            this.dgvLichChieu.Size = new System.Drawing.Size(829, 372);
             this.dgvLichChieu.TabIndex = 33;
             this.dgvLichChieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvLichChieu_CellClick);
             // 
@@ -260,6 +260,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1276, 372);
             this.Controls.Add(this.dgvLichChieu);
             this.Controls.Add(this.groupBox1);

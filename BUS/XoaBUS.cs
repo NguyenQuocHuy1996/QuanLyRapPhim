@@ -75,5 +75,18 @@ namespace BUS
                 throw ex;
             }
         }
+
+        //Xoa ThucAnTam
+        public int XoaThucAnTamBUS(ThucAn_TamDTO thucan)
+        {
+            try
+            {
+                return (new XoaDAL().XoaThucAnTamDAL(thucan));
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

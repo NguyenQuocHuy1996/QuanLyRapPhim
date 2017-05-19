@@ -109,6 +109,32 @@ namespace DAL
             }
         }
 
+        //Lay thong tin thuc an
+        public DataSet GetThucAnDAL(string sql)
+        {
+            try
+            {
+                return new DataProvider().GetData(sql);
+            }
+            catch (SqlException ex) 
+            {                
+                throw ex;
+            }
+        }
+
+        //Lay thong tin thuc an
+        public DataSet GetThucAnTamDAL(string sql)
+        {
+            try
+            {
+                return new DataProvider().GetData(sql);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
         //Lấy thông tin vé xem phim
         public DataSet GetVeDAL(string sql)
         {

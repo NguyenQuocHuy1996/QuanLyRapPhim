@@ -9,13 +9,19 @@ namespace DTO
     {
         public string TaiKhoan { get; set; }
         public string MatKhau { get; set; }
-        public string LoaiTaiKhoan { get; set; }
+        public string MaNV { get; set; }
+        public string TenNV { get; set; }
+        public string NgaySinh { get; set; }
+        public string ChucVu { get; set; }
 
-        public TaiKhoanDTO(string taiKhoan, string matKhau, string loaiTaiKhoan)
+        public TaiKhoanDTO(string taiKhoan, string matKhau,string maNV, string tenNV,string ngaySinh, string chucvu)
         {
             TaiKhoan = taiKhoan;
             MatKhau = matKhau;
-            LoaiTaiKhoan = loaiTaiKhoan;
+            MaNV = maNV;
+            TenNV = tenNV;
+            NgaySinh = ngaySinh;
+            ChucVu = chucvu;
         }
 
         public TaiKhoanDTO()

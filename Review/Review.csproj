@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConvertImage.cs" />
+    <Compile Include="FormQuayAn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuayAn.Designer.cs">
+      <DependentUpon>FormQuayAn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -59,11 +65,11 @@
     <Compile Include="QuanLyLichChieu.Designer.cs">
       <DependentUpon>QuanLyLichChieu.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormChinh.cs">
+    <Compile Include="FormQuayVe.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormChinh.Designer.cs">
-      <DependentUpon>FormChinh.cs</DependentUpon>
+    <Compile Include="FormQuayVe.Designer.cs">
+      <DependentUpon>FormQuayVe.cs</DependentUpon>
     </Compile>
     <Compile Include="FormQuanLy.cs">
       <SubType>Form</SubType>
@@ -140,6 +146,9 @@
     <Compile Include="Ve.Designer.cs">
       <DependentUpon>Ve.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormQuayAn.resx">
+      <DependentUpon>FormQuayAn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -147,8 +156,8 @@
     <EmbeddedResource Include="QuanLyLichChieu.resx">
       <DependentUpon>QuanLyLichChieu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormChinh.resx">
-      <DependentUpon>FormChinh.cs</DependentUpon>
+    <EmbeddedResource Include="FormQuayVe.resx">
+      <DependentUpon>FormQuayVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuanLy.resx">
       <DependentUpon>FormQuanLy.cs</DependentUpon>
@@ -295,6 +304,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PhongChieu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\QuayVe.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

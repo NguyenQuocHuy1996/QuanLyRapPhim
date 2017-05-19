@@ -89,6 +89,20 @@ namespace BUS
             }
         }
 
+        //Them thuc an tam
+        public int ThemThucAn_TamBUS(ThucAn_TamDTO thucantam)
+        {
+            try
+            {
+                return new ThemDAL().ThemThucAn_TamDAL(thucantam);
+            }
+            catch (SqlException ex)
+            {                
+                throw ex;
+            }
+        }
+
+        //Them tai khoan
         public int ThemTaiKhoanBUS(TaiKhoanDTO taikhoan)
         {
             try

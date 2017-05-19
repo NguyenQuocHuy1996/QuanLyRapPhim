@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="IconXoa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconXoa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="FormQuanLy" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\FormQuanLy.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -145,8 +142,8 @@
   <data name="IconLichChieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconLichChieu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IconPhim" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\IconPhim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IconXoa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconXoa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="IconBaoCao" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconBaoCao.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,10 +160,16 @@
   <data name="IconThem" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconThem.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IconPhim" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\IconPhim.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="IconSua" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconSua.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PhongChieu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PhongChieu.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuayVe" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\QuayVe.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

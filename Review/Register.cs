@@ -21,23 +21,9 @@ namespace Review
         }
 
         private void Register_Load(object sender, EventArgs e)
-        {            
-            cbGioiTinh.Items.Add("Nam");
-            cbGioiTinh.Items.Add("Nữ");
-            for (int i = 1; i<=31; i++)
-            {
-                cbNgay.Items.Add(i);
-            }
-
-            for (int i = 1; i <= 12; i++)
-            {
-                cbThang.Items.Add(i);
-            }
-
-            for(int i = 1990; i<= 2017; i++)
-            {
-                cbNam.Items.Add(i);
-            }
+        {
+            dgvNV.DataSource = GetData.GetNhanVien_TK().Tables[0];
+            dgvTK.DataSource = GetData.GetTaiKhoan().Tables[0];
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -47,49 +33,47 @@ namespace Review
                 //Them vao bang Khach Hang
                 try
                 {
-                    KhachHangDTO kh = new KhachHangDTO();
-
-                    kh.TaiKhoan = Convert.ToString(txtTaiKhoan.Text);
-                    kh.MatKhau = Convert.ToString(txtMatKhau.Text);
-                    kh.HoTen = Convert.ToString(txtHoTen.Text);
-                    kh.GioiTinh = Convert.ToString(cbGioiTinh.Text);
-                    kh.NgaySinh = Convert.ToString(cbNgay.Text) + "/" + Convert.ToString(cbThang.Text) + "/" + Convert.ToString(cbNam.Text);
-                    kh.CMND = Convert.ToInt32(txtCMND.Text);
-                    kh.DiaChi = Convert.ToString(txtDiaChi.Text);
-                    kh.Email = Convert.ToString(txtEmail.Text);
-                    kh.SDT = Convert.ToInt32(txtSDT.Text);
-
-                    KhachHangDTO khachhang = new KhachHangDTO(kh.TaiKhoan, kh.MatKhau, kh.HoTen, kh.GioiTinh, kh.NgaySinh, kh.CMND, kh.DiaChi, kh.Email, kh.SDT);
-                    int themkhachhang = new ThemBUS().ThemKhachHangBUS(khachhang);
-
                     //Them vao bang Tai Khoan
                     TaiKhoanDTO tk = new TaiKhoanDTO();
 
                     tk.TaiKhoan = Convert.ToString(txtTaiKhoan.Text);
                     tk.MatKhau = Convert.ToString(txtMatKhau.Text);
-                    tk.LoaiTaiKhoan = Convert.ToString("User");
+                    tk.MaNV = Convert.ToString(txtMaNV.Text);
+                    tk.TenNV = Convert.ToString(txtHoTen.Text);
+                    tk.NgaySinh = Convert.ToString(txtNgaySinh.Text);
+                    tk.ChucVu = Convert.ToString(txtChucVu.Text);
 
-                    TaiKhoanDTO taikhoan = new TaiKhoanDTO(tk.TaiKhoan, tk.MatKhau, tk.LoaiTaiKhoan);
+                    TaiKhoanDTO taikhoan = new TaiKhoanDTO(tk.TaiKhoan, tk.MatKhau, tk.MaNV, tk.TenNV, tk.NgaySinh, tk.ChucVu);
                     int themtaikhoan = new ThemBUS().ThemTaiKhoanBUS(taikhoan);
+
+                    dgvTK.DataSource = GetData.GetTaiKhoan().Tables[0];
+                    MessageBox.Show("Thêm tài khoản thành công");
                 }
                 catch (SqlException ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    MessageBox.Show(ex.Message);
+                    MessageBox.Show("Điền đầy đủ thông tin");
                 }
             }
             else
             {
                 lbRepass.Text = "Mật khẩu nhập lại chưa chính xác";
             }
-            //Close();
         }
 
         private void btnKiemTra_Click(object sender, EventArgs e)
         {
+        }
+
+        private void dgvNV_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtHoTen.Text = dgvNV.CurrentRow.Cells[0].Value.ToString().Trim();
+            txtChucVu.Text = dgvNV.CurrentRow.Cells[1].Value.ToString().Trim();
+            txtNgaySinh.Text = dgvNV.CurrentRow.Cells[2].Value.ToString().Trim();
+            txtMaNV.Text = dgvNV.CurrentRow.Cells[3].Value.ToString().Trim();
         }
     }
 }

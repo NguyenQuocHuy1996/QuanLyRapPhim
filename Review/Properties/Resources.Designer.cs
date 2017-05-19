@@ -223,6 +223,16 @@ namespace Review.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap QuayVe {
+            get {
+                object obj = ResourceManager.GetObject("QuayVe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap RapPhim {
             get {
                 object obj = ResourceManager.GetObject("RapPhim", resourceCulture);

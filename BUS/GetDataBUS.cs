@@ -106,6 +106,34 @@ namespace BUS
             }
         }
 
+        //Lay thong tin thuc an
+        public DataSet GetThucAnBUS(string sql)
+        {
+            try
+            {
+                return (new GetDataDAL().GetThucAnDAL(sql));
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        //Lay thong tin thuc an tam
+        public DataSet GetThucAnTamBUS(string sql)
+        {
+            try
+            {
+                return (new GetDataDAL().GetThucAnTamDAL(sql));
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
         //Lấy thông tin vé xem phim
         public DataSet GetVeBUS(string sql)
         {

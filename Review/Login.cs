@@ -16,7 +16,6 @@ namespace Review
     {
         DataSet dt;
         string quyen, taikhoan;
-        bool user = true, login = false;
         public Login()
         {
             InitializeComponent();
@@ -52,22 +51,23 @@ namespace Review
                     if (dt.Tables[0].Rows.Count == 1)
                     {
                         lbThongBao.Text = "Đăng nhập thành công";
-                        quyen = dt.Tables[0].Rows[0][3].ToString();
-                        taikhoan = dt.Tables[0].Rows[0][1].ToString();
+                        quyen = dt.Tables[0].Rows[0][5].ToString();
+                        taikhoan = dt.Tables[0].Rows[0][0].ToString();
 
-                        if (quyen == "Admin" || quyen == "Quản lý")
+                        if (quyen == "Nhân viên quầy vé")
                         {
-                            FormQuanLy show = new FormQuanLy(taikhoan, quyen);
-                            show.Show();
-                            if(show.Visible)
-                                this.Hide();
+                            FormQuayVe quayve = new FormQuayVe(taikhoan, quyen);
+                            quayve.Show();
+                        }
+                        else if (quyen == "Nhân viên quầy ăn")
+                        {
+                            FormQuayAn quayan = new FormQuayAn(taikhoan, quyen);
+                            quayan.Show();
                         }
                         else
                         {
-                            FormChinh show = new FormChinh(taikhoan, quyen, user, login);
-                            show.Show();
-                            if (show.Visible)
-                                this.Hide();
+                            FormQuanLy quanly = new FormQuanLy(taikhoan, quyen);
+                            quanly.Show();
                         }
                     }
                     else

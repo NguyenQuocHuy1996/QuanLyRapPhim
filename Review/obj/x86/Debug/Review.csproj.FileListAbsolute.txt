@@ -70,7 +70,6 @@ E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Bin\Review.exe
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Bin\Review.pdb
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.csprojResolveAssemblyReference.cache
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.QuanLyLichChieu.resources
-E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.FormChinh.resources
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.FormQuanLy.resources
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.Ghe.resources
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.Login.resources
@@ -111,3 +110,5 @@ C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.pdb
 C:\Users\sudo\Source\Repos\QuanLyRapPhim\Review\obj\x86\Debug\Review.Report.resources
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.Report.resources
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.QuanLyTheLoai.resources
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.FormQuayVe.resources
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.FormQuayAn.resources

@@ -149,6 +149,24 @@ namespace DAL
             }
         }
 
+        //Them ThucAn_Tam
+        public int ThemThucAn_TamDAL(ThucAn_TamDTO thucan_tam)
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@ID", thucan_tam.ID));
+            paras.Add(new SqlParameter("@TenTA", thucan_tam.TenTA));
+            paras.Add(new SqlParameter("@Gia", thucan_tam.Gia));
+            try
+            {
+                return dp.executeNonQuery("ThemThucAnTam",CommandType.StoredProcedure,paras);
+            }
+            catch (SqlException ex)
+            {                
+                throw ex;
+            }
+
+        }
+
         public int ThemKhachHangDAL(KhachHangDTO khachhang)
         {
             List<SqlParameter> paras = new List<SqlParameter>();
@@ -173,12 +191,16 @@ namespace DAL
 
         }
 
+        //Them tai khoan
         public int ThemTaiKhoanDAL(TaiKhoanDTO taikhoan)
         {
             List<SqlParameter> paras = new List<SqlParameter>();
             paras.Add(new SqlParameter("@TaiKhoan", taikhoan.TaiKhoan));
             paras.Add(new SqlParameter("@MatKhau", taikhoan.MatKhau));
-            paras.Add(new SqlParameter("@LoaiTaiKhoan", taikhoan.LoaiTaiKhoan));
+            paras.Add(new SqlParameter("@MaNV", taikhoan.MaNV));
+            paras.Add(new SqlParameter("@TenNV", taikhoan.TenNV));
+            paras.Add(new SqlParameter("@NgaySInh", taikhoan.NgaySinh));
+            paras.Add(new SqlParameter("@ChucVu", taikhoan.ChucVu));
 
             try
             {

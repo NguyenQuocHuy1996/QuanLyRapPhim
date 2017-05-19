@@ -104,5 +104,22 @@ namespace DAL
                 throw ex;
             }
         }
+
+        //Xoa ThucAnTam
+        public int XoaThucAnTamDAL(ThucAn_TamDTO thucan)
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@ID", thucan.ID));
+
+            try
+            {
+                return (dp.executeNonQuery("XoaThucAnTam", System.Data.CommandType.StoredProcedure, paras));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

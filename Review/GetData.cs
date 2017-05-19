@@ -74,10 +74,17 @@ namespace Review
             return new GetDataBUS().GetLichChieuBUS(sql);
         }
 
-        //All nhan vien trừ tài khoản + mật khẩu
+        //All nhan vien
         public static DataSet GetNhanVien()
         {
-            string sql = "SELECT MaNV,TenNV,NgaySinh,GioiTinh,SoCMND,DiaChi,SDT,Email,ChucVu,NgayVaoLam FROM NhanVien";
+            string sql = "SELECT * FROM NhanVien";
+            return new GetDataBUS().GetNhanVienBUS(sql);
+        }
+
+        //Lấy thông tin nhân viên cho bảng tài khoản
+        public static DataSet GetNhanVien_TK()
+        {
+            string sql = "SELECT TenNV, ChucVu, NgaySinh, MaNV FROM NhanVien Where ChucVu like N'Nhân viên quầy vé' or ChucVu like N'Nhân viên quầy ăn' or ChucVu like N'Quản lý%' or ChucVu like 'Admin'";
             return new GetDataBUS().GetNhanVienBUS(sql);
         }
 
@@ -93,6 +100,20 @@ namespace Review
         {
             string sql = "SELECT * FROM ChucVu";
             return new GetDataBUS().GetChucVuBUS(sql);
+        }
+
+        //Lay thong tin thuc an dua vao ten thuc an
+        public static DataSet GetThucAnDK(string thucan)
+        {
+            string sql = "Select * from ThucAn Where TenThucAn=N'"+ thucan +"'";
+            return new GetDataBUS().GetThucAnBUS(sql);
+        }
+
+        //Lay thong tin thuc an tam
+        public static DataSet GetThucAnTam()
+        {
+            string sql = "Select ID,TenThucAn, DonGia from ThucAn_Tam";
+            return new GetDataBUS().GetThucAnTamBUS(sql);
         }
 
         public static DataSet GetNgayChieu()
@@ -113,6 +134,14 @@ namespace Review
             return (new GetDataBUS().GetVeBUS(sql));
         }
 
+        //Lấy toàn bộ tài khoản
+        public static DataSet GetTaiKhoan()
+        {
+            string sql = "SELECT TaiKhoan, MatKhau, TenNV, ChucVu, NgaySinh, MaNV FROM TaiKhoan";
+            return new GetDataBUS().GetTaiKhoanBUS(sql);
+        }
+
+        //Lấy tài khoản quản lý
         public static DataSet GetTaiKhoanDK(string acc, string pass)
         {
             string sql = "Select * FROM TaiKhoan where TaiKhoan=N'" + acc + "' and MatKhau='" + pass + "'";
