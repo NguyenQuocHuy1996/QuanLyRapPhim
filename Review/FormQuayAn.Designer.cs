@@ -58,6 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnLamMoi = new System.Windows.Forms.Button();
             this.lbUser = new System.Windows.Forms.Label();
+            this.btnDangXuat = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThucAnTam)).BeginInit();
             this.SuspendLayout();
@@ -371,7 +372,6 @@
             this.dgvThucAnTam.Name = "dgvThucAnTam";
             this.dgvThucAnTam.Size = new System.Drawing.Size(778, 298);
             this.dgvThucAnTam.TabIndex = 1;
-            this.dgvThucAnTam.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThucAnTam_CellClick);
             // 
             // btnBoChon
             // 
@@ -386,6 +386,7 @@
             // 
             // btnThanhToan
             // 
+            this.btnThanhToan.Enabled = false;
             this.btnThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThanhToan.Location = new System.Drawing.Point(796, 260);
             this.btnThanhToan.Name = "btnThanhToan";
@@ -419,6 +420,7 @@
             // 
             // btnLamMoi
             // 
+            this.btnLamMoi.Enabled = false;
             this.btnLamMoi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLamMoi.Location = new System.Drawing.Point(796, 68);
             this.btnLamMoi.Name = "btnLamMoi";
@@ -431,19 +433,30 @@
             // lbUser
             // 
             this.lbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUser.Location = new System.Drawing.Point(1184, 9);
+            this.lbUser.Location = new System.Drawing.Point(1122, 12);
             this.lbUser.Name = "lbUser";
             this.lbUser.Size = new System.Drawing.Size(148, 23);
             this.lbUser.TabIndex = 7;
             this.lbUser.Text = "Xin chào";
             this.lbUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Location = new System.Drawing.Point(1276, 12);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(75, 23);
+            this.btnDangXuat.TabIndex = 8;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
             // FormQuayAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(1344, 686);
+            this.ClientSize = new System.Drawing.Size(1363, 686);
+            this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.lbUser);
             this.Controls.Add(this.btnLamMoi);
             this.Controls.Add(this.label1);
@@ -456,6 +469,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormQuayAn";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormQuayAn_FormClosing);
             this.Load += new System.EventHandler(this.FormQuayAn_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThucAnTam)).EndInit();
@@ -495,5 +509,6 @@
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Label lbUser;
+        private System.Windows.Forms.Button btnDangXuat;
     }
 }

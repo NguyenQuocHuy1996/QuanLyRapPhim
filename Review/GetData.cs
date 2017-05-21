@@ -74,6 +74,13 @@ namespace Review
             return new GetDataBUS().GetLichChieuBUS(sql);
         }
 
+        //Lấy giờ chiếu có trong lịch chiếu
+        public static DataSet GetGioChieu(string maRP, string maPhim, string NgayChieu)
+        {
+            string sql = "SELECT * FROM LichChieu WHERE MaRapPhim=N'"+maRP+"' and MaPhim =N'"+maPhim+"' and NgayChieu =N'"+NgayChieu+"'";
+            return new GetDataBUS().GetLichChieuBUS(sql);
+        }
+
         //All nhan vien
         public static DataSet GetNhanVien()
         {
@@ -112,22 +119,19 @@ namespace Review
         //Lay thong tin thuc an tam
         public static DataSet GetThucAnTam()
         {
-            string sql = "Select ID,TenThucAn, DonGia from ThucAn_Tam";
+            string sql = "Select TenThucAn, SoLuong, DonGia, TongTien from ThucAn_Tam order by ID";
             return new GetDataBUS().GetThucAnTamBUS(sql);
         }
 
-        public static DataSet GetNgayChieu()
+        //Lay thong tin trang thai ghe ngoi
+        public static DataSet GetGhe(string marp, string maphim, string ngaychieu, string giochieu, string soghe)
         {
-            string sql = "Select * FROM NgayChieu";
-            return new GetDataBUS().GetNgayChieuBUS(sql);
+            string sql = "SELECT * FROM Ghe WHERE MaRapPhim=N'" + marp + "' and MaPhim=N'" + maphim + "' and NgayChieu=N'" + ngaychieu + "' and GioChieu=N'" + giochieu + "' and SoGhe =N'" + soghe + "'";
+            return new GetDataBUS().GetGheBUS(sql);
         }
 
-        public static DataSet GetGioChieu()
-        {
-            string sql = "Select * from GioChieu";
-            return new GetDataBUS().GetGioChieuBus(sql);
-        }
 
+        //Lay thong tin ve
         public static DataSet GetVe()
         {
             string sql = "SELECT * FROM Ve";
@@ -142,9 +146,9 @@ namespace Review
         }
 
         //Lấy tài khoản quản lý
-        public static DataSet GetTaiKhoanDK(string acc, string pass)
+        public static DataSet GetTaiKhoanDK(string acc)
         {
-            string sql = "Select * FROM TaiKhoan where TaiKhoan=N'" + acc + "' and MatKhau='" + pass + "'";
+            string sql = "Select * FROM TaiKhoan where TaiKhoan=N'" + acc + "'";
             return new GetDataBUS().GetTaiKhoanBUS(sql);
         }
     }

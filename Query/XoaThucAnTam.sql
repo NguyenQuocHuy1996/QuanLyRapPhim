@@ -1,10 +1,10 @@
 use MovieDB
 go
 
-Alter proc XoaThucAnTam(@ID int)
+Alter proc XoaThucAnTam(@TenTA nvarchar(50))
 as
 begin
 	Delete ThucAn_Tam
-	Where ID = @ID
+	Where TenThucAn = @TenTA
 end
 go

@@ -23,18 +23,6 @@ namespace BUS
                 throw ex;
             }
         }
-        //Lấy thông tin 1 phòng chiếu
-        public GheDTO GetOnePhongChieuBUS(string maphim)
-        {
-            try
-            {
-                return (new GetOneDataDAL().GetOnePhongChieuDAL(maphim));
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-        }
 
         //Get 1 doi tuong phim
         public PhimDTO GetOnePhimBUS(string maphim)

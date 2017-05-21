@@ -15,6 +15,7 @@ namespace Review
 {
     public partial class QuanLyPhim : Form
     {
+        List<string> listmaphim = new List<string>();
 
         public QuanLyPhim()
         {
@@ -53,7 +54,7 @@ namespace Review
                 cbTheLoai.Text = dgvPhim.CurrentRow.Cells[6].Value.ToString().Trim();
                 //Tao 1 doi tuong  Phim moi
                 GetOneDataBUS np = new GetOneDataBUS();
-                PhimDTO phim = np.GetOnePhimBUS(txtMaPhim.Text);
+                PhimDTO phim = np.GetOnePhimBUS(dgvPhim.CurrentRow.Cells[0].Value.ToString().Trim());
                 //Lay Hinh
                 picImage.Image = ConvertImage.ConvertByteToImage(phim.HinhAnh);
             }
@@ -116,7 +117,7 @@ namespace Review
                 int nam, thoiLuong;
                 byte[] hinhAnh;
 
-                maPhim = Convert.ToString(txtMaPhim.Text);
+                maPhim = Convert.ToString(dgvPhim.CurrentRow.Cells[0].Value.ToString().Trim());
                 tenPhim = Convert.ToString(txtTenPhim.Text);
                 daoDien = Convert.ToString(txtDaoDien.Text);
                 quocGia = Convert.ToString(txtQuocGia.Text);
@@ -146,24 +147,27 @@ namespace Review
         {
             try
             {
-                string maPhim, tenPhim, daoDien, quocGia, theLoai;
-                int nam, thoiLuong;
+                if (GetData.GetPhim().Tables[0].Rows.Count > 10)
+                {
+                    string maPhim;
 
-                maPhim = Convert.ToString(txtMaPhim.Text);
-                tenPhim = Convert.ToString(txtTenPhim.Text);
-                daoDien = Convert.ToString(txtDaoDien.Text);
-                quocGia = Convert.ToString(txtQuocGia.Text);
-                theLoai = Convert.ToString(cbTheLoai.Text);
-                nam = Convert.ToInt32(txtNam.Text);
-                thoiLuong = Convert.ToInt32(txtThoiLuong.Text);
+                    maPhim = Convert.ToString(dgvPhim.CurrentRow.Cells[0].Value.ToString().Trim());
 
-                PhimDTO film = new PhimDTO(maPhim, tenPhim, daoDien, quocGia, nam, thoiLuong, theLoai);
-                int xoaphim = new XoaBUS().Xoa_PhimBUS(film);
+                    PhimDTO film = new PhimDTO(maPhim);
+                    int xoaphim = new XoaBUS().Xoa_PhimBUS(film);
 
-                dgvPhim.DataSource = GetData.GetPhim().Tables[0];
-                txtMaPhim.Text = txtTenPhim.Text = txtDaoDien.Text = txtQuocGia.Text = cbTheLoai.Text = txtNam.Text = txtThoiLuong.Text = txtHinhAnh.Text = "";
-                picImage.Visible = false;
-                MessageBox.Show("Xóa phim thành công");
+                    dgvPhim.DataSource = GetData.GetPhim().Tables[0];
+                    txtTenPhim.Text = txtDaoDien.Text = txtQuocGia.Text = cbTheLoai.Text = txtNam.Text = txtThoiLuong.Text = txtHinhAnh.Text = "";
+                    picImage.Visible = false;
+
+                    listmaphim.Add(maPhim);
+
+                    MessageBox.Show("Xóa phim thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Phải có ít nhất 10 bộ phim");
+                }
             }
             catch (SqlException ex)
             {
@@ -187,7 +191,7 @@ namespace Review
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            txtMaPhim.Text = txtTenPhim.Text = txtDaoDien.Text = txtNam.Text = txtQuocGia.Text = txtThoiLuong.Text = txtHinhAnh.Text ="";
+            txtTenPhim.Text = txtDaoDien.Text = txtNam.Text = txtQuocGia.Text = txtThoiLuong.Text = txtHinhAnh.Text ="";
             picImage.Visible = false;
         }
 
@@ -201,6 +205,7 @@ namespace Review
         {
             QuanLyTheLoai TheLoai = new QuanLyTheLoai();
             TheLoai.Show();
+            this.Hide();
         }
     }
 }

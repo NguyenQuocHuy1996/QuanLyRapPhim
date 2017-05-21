@@ -45,6 +45,7 @@
     <Compile Include="GetDataDAL.cs" />
     <Compile Include="GetOneDataDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResetIndexDAL.cs" />
     <Compile Include="SuaDAL.cs" />
     <Compile Include="ThemDAL.cs" />
     <Compile Include="XoaDAL.cs" />

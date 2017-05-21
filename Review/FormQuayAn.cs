@@ -15,7 +15,7 @@ namespace Review
 {
     public partial class FormQuayAn : Form
     {
-        int i, tongtien;
+        int tongtien;
         bool check = true;
 
         public FormQuayAn()
@@ -31,7 +31,6 @@ namespace Review
 
         private void FormQuayAn_Load(object sender, EventArgs e)
         {
-            i = 1;
             tongtien = 0;
             dgvThucAnTam.DataSource = GetData.GetThucAnTam().Tables[0];
 
@@ -40,14 +39,15 @@ namespace Review
             for (int j = 0; j < u; j++)
             {
                 //Xoa dòng đầu tiên
-                int id;
-                id = Convert.ToInt32(dgvThucAnTam.CurrentRow.Cells[0].Value.ToString().Trim());
+                string tenthucan;
+                tenthucan = Convert.ToString(dgvThucAnTam.CurrentRow.Cells[0].Value.ToString().Trim());
 
-                ThucAn_TamDTO thucantam = new ThucAn_TamDTO(id);
+                ThucAn_TamDTO thucantam = new ThucAn_TamDTO(tenthucan);
                 int xoathucantam = new XoaBUS().XoaThucAnTamBUS(thucantam);
 
                 dgvThucAnTam.DataSource = GetData.GetThucAnTam().Tables[0];
             }
+            new ResetIndexBUS().ResetSTTBUS();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,18 +55,20 @@ namespace Review
             Button bt = (Button)sender;
             if (check == true)
             {
+                btnThanhToan.Enabled = btnLamMoi.Enabled = true;
+
                 //Them thuc an
                 string thucan;
-                int gia, id;
+                int gia;
+                //int id;
 
-                id = Convert.ToInt32(i);
+                //id = Convert.ToInt32(i);
                 thucan = Convert.ToString(GetData.GetThucAnDK(bt.Text.ToString().Trim()).Tables[0].Rows[0][0].ToString().Trim());
                 gia = Convert.ToInt32(GetData.GetThucAnDK(bt.Text.ToString().Trim()).Tables[0].Rows[0][1].ToString().Trim());
 
-                ThucAn_TamDTO thucantam = new ThucAn_TamDTO(id,thucan, gia);
+                ThucAn_TamDTO thucantam = new ThucAn_TamDTO(thucan, gia);
                 int themthucantam = new ThemBUS().ThemThucAn_TamBUS(thucantam);
 
-                i = i + 1;
                 dgvThucAnTam.DataSource = GetData.GetThucAnTam().Tables[0];
 
                 //Cộng tổng tiền
@@ -80,16 +82,14 @@ namespace Review
             try
             {
                 string thucan;
-                int gia, id;
-                id = Convert.ToInt32(dgvThucAnTam.CurrentRow.Cells[0].Value.ToString().Trim());
-                thucan = Convert.ToString(dgvThucAnTam.CurrentRow.Cells[1].Value.ToString().Trim());
-                gia = Convert.ToInt32(dgvThucAnTam.CurrentRow.Cells[2].Value.ToString().Trim());
+                thucan = Convert.ToString(dgvThucAnTam.CurrentRow.Cells[0].Value.ToString().Trim());
 
-                ThucAn_TamDTO thucantam = new ThucAn_TamDTO(id,thucan, gia);
+                ThucAn_TamDTO thucantam = new ThucAn_TamDTO(thucan);
                 int xoathucantam = new XoaBUS().XoaThucAnTamBUS(thucantam);
 
+                ResetIndexBUS reset = new ResetIndexBUS();
+
                 dgvThucAnTam.DataSource = GetData.GetThucAnTam().Tables[0];
-                i = 1;
             }
             catch (SqlException ex)
             {
@@ -103,33 +103,70 @@ namespace Review
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thanh toán thành công");
             check = false;
-        }
 
-        private void dgvThucAnTam_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+            //string tenTA, ngay, gio;
+            //int gia;
+
+            //tenTA = dgvThucAnTam.currentr
+
+            //MessageBox.Show("Thanh toán thành công");
+            if (GetData.GetThucAnTam().Tables[0].Rows.Count != 0)
+            {
+                HoaDon hoadon = new HoaDon();
+                hoadon.Show();                
+            }
         }
 
         private void btnLamMoi_Click(object sender, EventArgs e)
         {
-            i = 1;
             tongtien = 0;
+
             //Xoa trắng CSDL mỗi khi thoát chương trình
             int u = GetData.GetThucAnTam().Tables[0].Rows.Count;
             for (int j = 0; j < u; j++)
             {
                 //Xoa dòng đầu tiên
-                int id;
-                id = Convert.ToInt32(dgvThucAnTam.CurrentRow.Cells[0].Value.ToString().Trim());
+                string tenthucan;
+                tenthucan = Convert.ToString(dgvThucAnTam.CurrentRow.Cells[0].Value.ToString().Trim());
 
-                ThucAn_TamDTO thucantam = new ThucAn_TamDTO(id);
+                ThucAn_TamDTO thucantam = new ThucAn_TamDTO(tenthucan);
                 int xoathucantam = new XoaBUS().XoaThucAnTamBUS(thucantam);
 
                 dgvThucAnTam.DataSource = GetData.GetThucAnTam().Tables[0];
             }
-            lbTongTien.Text = "";
+            new ResetIndexBUS().ResetSTTBUS();
+
+            lbTongTien.Text = "0";
             check = true;
+            btnThanhToan.Enabled = btnLamMoi.Enabled = false;
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
+
+        private void FormQuayAn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Xoa trắng CSDL mỗi khi thoát chương trình
+            int u = GetData.GetThucAnTam().Tables[0].Rows.Count;
+            for (int j = 0; j < u; j++)
+            {
+                //Xoa dòng đầu tiên
+                string tenthucan;
+                tenthucan = Convert.ToString(dgvThucAnTam.CurrentRow.Cells[0].Value.ToString().Trim());
+
+                ThucAn_TamDTO thucantam = new ThucAn_TamDTO(tenthucan);
+                int xoathucantam = new XoaBUS().XoaThucAnTamBUS(thucantam);
+
+                dgvThucAnTam.DataSource = GetData.GetThucAnTam().Tables[0];
+            }
+            new ResetIndexBUS().ResetSTTBUS();
+
+            Application.Exit();
         }
     }
 }

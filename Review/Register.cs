@@ -28,44 +28,65 @@ namespace Review
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (txtMatKhau.Text == txtRePass.Text)
+            if (txtTaiKhoan.Text != "" || txtMatKhau.Text != "")
             {
-                //Them vao bang Khach Hang
-                try
+                if (txtMatKhau.Text == txtRePass.Text)
                 {
-                    //Them vao bang Tai Khoan
-                    TaiKhoanDTO tk = new TaiKhoanDTO();
+                    try
+                    {
+                        //Them vao bang Tai Khoan
+                        TaiKhoanDTO tk = new TaiKhoanDTO();
 
-                    tk.TaiKhoan = Convert.ToString(txtTaiKhoan.Text);
-                    tk.MatKhau = Convert.ToString(txtMatKhau.Text);
-                    tk.MaNV = Convert.ToString(txtMaNV.Text);
-                    tk.TenNV = Convert.ToString(txtHoTen.Text);
-                    tk.NgaySinh = Convert.ToString(txtNgaySinh.Text);
-                    tk.ChucVu = Convert.ToString(txtChucVu.Text);
+                        tk.TaiKhoan = Convert.ToString(txtTaiKhoan.Text);
+                        tk.MatKhau = Convert.ToString(txtMatKhau.Text);
+                        tk.MaNV = Convert.ToString(txtMaNV.Text);
+                        tk.TenNV = Convert.ToString(txtHoTen.Text);
+                        tk.NgaySinh = Convert.ToString(txtNgaySinh.Text);
+                        tk.ChucVu = Convert.ToString(txtChucVu.Text);
 
-                    TaiKhoanDTO taikhoan = new TaiKhoanDTO(tk.TaiKhoan, tk.MatKhau, tk.MaNV, tk.TenNV, tk.NgaySinh, tk.ChucVu);
-                    int themtaikhoan = new ThemBUS().ThemTaiKhoanBUS(taikhoan);
+                        TaiKhoanDTO taikhoan = new TaiKhoanDTO(tk.TaiKhoan, tk.MatKhau, tk.MaNV, tk.TenNV, tk.NgaySinh, tk.ChucVu);
+                        int themtaikhoan = new ThemBUS().ThemTaiKhoanBUS(taikhoan);
 
-                    dgvTK.DataSource = GetData.GetTaiKhoan().Tables[0];
-                    MessageBox.Show("Thêm tài khoản thành công");
+                        dgvTK.DataSource = GetData.GetTaiKhoan().Tables[0];
+                        MessageBox.Show("Thêm tài khoản thành công");
+                        txtTaiKhoan.Text = txtMatKhau.Text = txtRePass.Text = txtMaNV.Text = txtHoTen.Text = txtChucVu.Text = txtNgaySinh.Text = lbRepass.Text = "";
+                    }
+                    catch (SqlException ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Điền đầy đủ thông tin");
+                    }
                 }
-                catch (SqlException ex)
+                else
                 {
-                    MessageBox.Show(ex.Message);
+                    lbRepass.Text = "Mật khẩu nhập lại không chính xác";
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Điền đầy đủ thông tin");
-                }
+                
             }
             else
             {
-                lbRepass.Text = "Mật khẩu nhập lại chưa chính xác";
+                lbRepass.Text = "Tài khoản và mật khẩu không được để trống";
             }
         }
 
         private void btnKiemTra_Click(object sender, EventArgs e)
         {
+            if (GetData.GetTaiKhoanDK(txtTaiKhoan.Text.ToString()).Tables[0].Rows.Count == 1)
+            {
+                lbRepass.Text = "Tài khoản đã có, chọn tài khoản khác";
+            }
+            else if(txtTaiKhoan.Text == "")
+            {
+                lbRepass.Text = "Nhập vào tên tài khoản";
+            }
+            else
+            {
+                lbRepass.Text = "Bạn có thể sử dụng tài khoản này";
+            }
+                    
         }
 
         private void dgvNV_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -74,6 +95,32 @@ namespace Review
             txtChucVu.Text = dgvNV.CurrentRow.Cells[1].Value.ToString().Trim();
             txtNgaySinh.Text = dgvNV.CurrentRow.Cells[2].Value.ToString().Trim();
             txtMaNV.Text = dgvNV.CurrentRow.Cells[3].Value.ToString().Trim();
+        }
+
+        private void btnDeleteAcc_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string taikhoan;
+
+                taikhoan = Convert.ToString(dgvTK.CurrentRow.Cells[0].Value.ToString().Trim());
+
+                TaiKhoanDTO tk = new TaiKhoanDTO(taikhoan);
+                int themrapphim = new XoaBUS().XoaTaiKhoanBUS(tk);
+
+                dgvTK.DataSource = GetData.GetTaiKhoan().Tables[0];
+
+                MessageBox.Show("Xóa thành công");
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

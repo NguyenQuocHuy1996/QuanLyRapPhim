@@ -27,7 +27,7 @@ namespace Review
 
         private void dgvTheLoai_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtTheLoai.Text = dgvTheLoai.CurrentRow.Cells[1].Value.ToString().Trim();
+            txtTheLoai.Text = dgvTheLoai.CurrentRow.Cells[0].Value.ToString().Trim();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -41,25 +41,45 @@ namespace Review
                 int themtheloai = new ThemBUS().ThemTheLoaiBUS(tl);
 
                 dgvTheLoai.DataSource = GetData.GetTheLoai().Tables[0];
+                MessageBox.Show("Thêm thể loại thành công");
             }
             catch (SqlException ex)
-            {                
-                throw ex;
+            {
+                MessageBox.Show(ex.Message);
             }
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string theloai;
+                theloai = Convert.ToString(dgvTheLoai.CurrentRow.Cells[0].Value.ToString().Trim());
+                TheLoaiDTO tl = new TheLoaiDTO(theloai);
+                int xoatheloai = new XoaBUS().XoaTheLoaiBUS(tl);
 
+                dgvTheLoai.DataSource = GetData.GetTheLoai().Tables[0];
+                MessageBox.Show("Xóa thể loại thành công");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Close();
+            QuanLyPhim phim = new QuanLyPhim();
+            phim.Show();
+            this.Close();
         }
     }
 }

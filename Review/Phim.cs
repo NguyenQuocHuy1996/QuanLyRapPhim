@@ -29,43 +29,17 @@ namespace Review
             //cbTenPhim.Text = "";
         }
 
-        private DataSet NgayChieu()
-        {
-            try
-            {
-                string sql = "Select L.* from LichChieu L, Phim P Where L.MaPhim = P.MaPhim and P.MaPhim =N'" + cbTenPhim.SelectedValue.ToString() + "'";
-                return (new GetDataBUS().GetNgayChieuBUS(sql));
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-        }
-
-        private DataSet GioChieu()
-        {
-            try
-            {
-                string sql = "Select GioChieu from LichChieu where MaPhim = N'" + cbTenPhim.SelectedValue.ToString() + "' and NgayChieu = '"+ cbNgayChieu.Text +"'";
-                return (new GetDataBUS().GetGioChieuBus(sql));
-            }
-            catch (SqlException ex)
-            {                
-                throw ex;
-            }
-        }
-
         private void btnBuyTicket_Click(object sender, EventArgs e)
         {
-            Review.Ghe show = new Ghe(lbMaPhim.Text, cbTenPhim.Text, cbNgayChieu.Text, lbGioChieu.Text);
-            this.Visible = false;
-            show.ShowDialog();
-            this.Visible = true;
+            //Review.Ghe show = new Ghe(lbMaPhim.Text, cbTenPhim.Text, cbNgayChieu.Text, lbGioChieu.Text);
+            //this.Visible = false;
+            //show.ShowDialog();
+            //this.Visible = true;
         }
 
         private void cbTenPhim_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cbNgayChieu.DataSource = NgayChieu().Tables[0];
+            //cbNgayChieu.DataSource = NgayChieu().Tables[0];
             cbNgayChieu.DisplayMember = "NgayChieu";
             //cbNgayChieu.Text = "";
             //An thong tin
@@ -89,7 +63,7 @@ namespace Review
             lbTheLoai.Text = phim.TheLoai;
 
             //Gio chieu
-            lbGioChieu.DataSource = GioChieu().Tables[0];
+            //lbGioChieu.DataSource = GioChieu().Tables[0];
             lbGioChieu.DisplayMember = "GioChieu";
 
             //Lay Hinh

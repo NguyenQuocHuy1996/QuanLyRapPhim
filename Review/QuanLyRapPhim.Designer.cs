@@ -39,7 +39,6 @@
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtMaNhanVien = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtMaRP = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -48,17 +47,16 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRapPhim)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvRapPhim
             // 
             this.dgvRapPhim.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRapPhim.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRapPhim.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dgvRapPhim.Location = new System.Drawing.Point(0, 0);
+            this.dgvRapPhim.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dgvRapPhim.Location = new System.Drawing.Point(416, 0);
             this.dgvRapPhim.Name = "dgvRapPhim";
-            this.dgvRapPhim.Size = new System.Drawing.Size(655, 472);
+            this.dgvRapPhim.Size = new System.Drawing.Size(578, 472);
             this.dgvRapPhim.TabIndex = 0;
             this.dgvRapPhim.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRapPhim_CellClick);
             // 
@@ -152,7 +150,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.GhostWhite;
-            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.txtMaRP);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnAdd);
@@ -168,22 +165,12 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.cbTenNhanVien);
             this.groupBox1.Controls.Add(this.txtTenRapPhim);
-            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.groupBox1.Location = new System.Drawing.Point(661, 0);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(333, 472);
+            this.groupBox1.Size = new System.Drawing.Size(410, 472);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Review.Properties.Resources.RapPhim;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 264);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(321, 208);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
             // 
             // txtMaRP
             // 
@@ -206,7 +193,7 @@
             // 
             this.btnAdd.Image = global::Review.Properties.Resources.IconThem;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAdd.Location = new System.Drawing.Point(25, 162);
+            this.btnAdd.Location = new System.Drawing.Point(6, 194);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(95, 45);
             this.btnAdd.TabIndex = 13;
@@ -219,7 +206,7 @@
             // 
             this.btnClose.Image = global::Review.Properties.Resources.IconClose;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnClose.Location = new System.Drawing.Point(227, 213);
+            this.btnClose.Location = new System.Drawing.Point(309, 194);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(95, 45);
             this.btnClose.TabIndex = 14;
@@ -232,7 +219,7 @@
             // 
             this.btnDelete.Image = global::Review.Properties.Resources.IconXoa1;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDelete.Location = new System.Drawing.Point(227, 162);
+            this.btnDelete.Location = new System.Drawing.Point(208, 194);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(95, 45);
             this.btnDelete.TabIndex = 13;
@@ -245,7 +232,7 @@
             // 
             this.btnUpdate.Image = global::Review.Properties.Resources.IconSua;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnUpdate.Location = new System.Drawing.Point(126, 162);
+            this.btnUpdate.Location = new System.Drawing.Point(107, 194);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(95, 45);
             this.btnUpdate.TabIndex = 12;
@@ -271,7 +258,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvRapPhim)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -295,6 +281,5 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.TextBox txtMaRP;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

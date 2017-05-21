@@ -122,7 +122,7 @@ namespace DAL
             }
         }
 
-        //Lay thong tin thuc an
+        //Lay thong tin thuc an tam
         public DataSet GetThucAnTamDAL(string sql)
         {
             try
@@ -135,8 +135,8 @@ namespace DAL
             }
         }
 
-        //Lấy thông tin vé xem phim
-        public DataSet GetVeDAL(string sql)
+        //Lay thong tin trang thai cua ghe
+        public DataSet GetGheDAL(string sql)
         {
             try
             {
@@ -146,27 +146,15 @@ namespace DAL
             {
                 throw ex;
             }
+               
         }
 
-        //Lấy thông tin ngày chiếu
-        public DataSet GetNgayChieuDAL(string sql)
+        //Lấy thông tin vé xem phim
+        public DataSet GetVeDAL(string sql)
         {
             try
             {
-                return new DataProvider().GetData(sql);
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-        }
-
-        //Lấy thông tin giờ chiếu
-        public DataSet GetGioChieuDAL(string sql)
-        {
-            try
-            {
-                return new DataProvider().GetData(sql);
+                return (new DataProvider().GetData(sql));
             }
             catch (SqlException ex)
             {

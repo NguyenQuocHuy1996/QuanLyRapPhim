@@ -18,10 +18,16 @@ namespace DTO
             Gia = gia;
         }
 
-
-        public ThucAn_TamDTO(int id)
+        public ThucAn_TamDTO(string tenTA, int gia)
         {
-            ID = id;
+            TenTA = tenTA;
+            Gia = gia;
+        }
+
+
+        public ThucAn_TamDTO(string tenTA)
+        {
+            TenTA = tenTA;
         }
     }
 }

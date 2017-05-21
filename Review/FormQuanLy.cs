@@ -62,10 +62,23 @@ namespace Review
             NhanVien.Show();
         }
 
+        private void btnTaiKhoan_Click(object sender, EventArgs e)
+        {
+            Register taikhoan = new Register();
+            taikhoan.Show();
+        }
+
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
             Report Report = new Report();
             Report.Show();
+        }
+
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
     }
 }

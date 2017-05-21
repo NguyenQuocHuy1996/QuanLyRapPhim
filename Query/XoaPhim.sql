@@ -8,5 +8,3 @@ begin
 	Where MaPhim=@MaPhim
 end
 go
-
-exec XoaPhim N'Phim07';

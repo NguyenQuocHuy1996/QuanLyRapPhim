@@ -47,10 +47,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dgvPhongChieu = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongChieu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -61,8 +59,8 @@
             this.groupBox1.Controls.Add(this.txtMaPC);
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.txtTenPC);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnDelete);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btnAdd);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.btnUpdate);
@@ -70,9 +68,10 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtTenNV);
             this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(553, 189);
+            this.groupBox1.Size = new System.Drawing.Size(433, 472);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             // 
@@ -89,14 +88,14 @@
             // cbDinhDang
             // 
             this.cbDinhDang.FormattingEnabled = true;
-            this.cbDinhDang.Location = new System.Drawing.Point(424, 64);
+            this.cbDinhDang.Location = new System.Drawing.Point(100, 235);
             this.cbDinhDang.Name = "cbDinhDang";
             this.cbDinhDang.Size = new System.Drawing.Size(116, 21);
             this.cbDinhDang.TabIndex = 27;
             // 
             // txtMaPC
             // 
-            this.txtMaPC.Location = new System.Drawing.Point(424, 12);
+            this.txtMaPC.Location = new System.Drawing.Point(100, 183);
             this.txtMaPC.Name = "txtMaPC";
             this.txtMaPC.Size = new System.Drawing.Size(116, 20);
             this.txtMaPC.TabIndex = 26;
@@ -106,7 +105,7 @@
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.Image = global::Review.Properties.Resources.IconClose;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(440, 137);
+            this.btnClose.Location = new System.Drawing.Point(324, 280);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(100, 40);
             this.btnClose.TabIndex = 10;
@@ -117,15 +116,15 @@
             // 
             // txtTenPC
             // 
-            this.txtTenPC.Location = new System.Drawing.Point(424, 38);
+            this.txtTenPC.Location = new System.Drawing.Point(100, 209);
             this.txtTenPC.Name = "txtTenPC";
-            this.txtTenPC.Size = new System.Drawing.Size(116, 20);
+            this.txtTenPC.Size = new System.Drawing.Size(226, 20);
             this.txtTenPC.TabIndex = 25;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(331, 67);
+            this.label5.Location = new System.Drawing.Point(7, 238);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 13);
             this.label5.TabIndex = 24;
@@ -136,7 +135,7 @@
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDelete.Image = global::Review.Properties.Resources.IconXoa1;
             this.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDelete.Location = new System.Drawing.Point(331, 137);
+            this.btnDelete.Location = new System.Drawing.Point(218, 280);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 40);
             this.btnDelete.TabIndex = 12;
@@ -150,7 +149,7 @@
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAdd.Image = global::Review.Properties.Resources.IconThem;
             this.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdd.Location = new System.Drawing.Point(331, 91);
+            this.btnAdd.Location = new System.Drawing.Point(6, 280);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 40);
             this.btnAdd.TabIndex = 11;
@@ -162,7 +161,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(331, 42);
+            this.label3.Location = new System.Drawing.Point(7, 213);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 23;
@@ -172,7 +171,7 @@
             // 
             this.btnUpdate.Image = global::Review.Properties.Resources.IconSua;
             this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(437, 91);
+            this.btnUpdate.Location = new System.Drawing.Point(112, 280);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(100, 40);
             this.btnUpdate.TabIndex = 19;
@@ -184,7 +183,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(331, 15);
+            this.label2.Location = new System.Drawing.Point(7, 186);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(87, 13);
             this.label2.TabIndex = 22;
@@ -244,24 +243,12 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPhongChieu.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvPhongChieu.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvPhongChieu.Location = new System.Drawing.Point(0, 194);
+            this.dgvPhongChieu.Dock = System.Windows.Forms.DockStyle.Right;
+            this.dgvPhongChieu.Location = new System.Drawing.Point(439, 0);
             this.dgvPhongChieu.Name = "dgvPhongChieu";
-            this.dgvPhongChieu.Size = new System.Drawing.Size(794, 278);
+            this.dgvPhongChieu.Size = new System.Drawing.Size(355, 472);
             this.dgvPhongChieu.TabIndex = 17;
             this.dgvPhongChieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongChieu_CellClick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::Review.Properties.Resources.RapPhim;
-            this.pictureBox1.Image = global::Review.Properties.Resources.PhongChieu;
-            this.pictureBox1.Location = new System.Drawing.Point(545, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(249, 189);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
             // 
             // QuanLyPhongChieu
             // 
@@ -269,7 +256,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(794, 472);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dgvPhongChieu);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);
@@ -282,7 +268,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongChieu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -307,6 +292,5 @@
         private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox lbTenRP;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

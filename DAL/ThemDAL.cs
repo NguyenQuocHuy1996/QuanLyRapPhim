@@ -153,7 +153,7 @@ namespace DAL
         public int ThemThucAn_TamDAL(ThucAn_TamDTO thucan_tam)
         {
             List<SqlParameter> paras = new List<SqlParameter>();
-            paras.Add(new SqlParameter("@ID", thucan_tam.ID));
+            //paras.Add(new SqlParameter("@ID", thucan_tam.ID));
             paras.Add(new SqlParameter("@TenTA", thucan_tam.TenTA));
             paras.Add(new SqlParameter("@Gia", thucan_tam.Gia));
             try
@@ -165,6 +165,48 @@ namespace DAL
                 throw ex;
             }
 
+        }
+
+        //Them tai khoan
+        public int ThemHoaDonDAL(HoaDonDTO hoadon)
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@TenTA", hoadon.TenTA));
+            paras.Add(new SqlParameter("@Gia", hoadon.Gia));
+            paras.Add(new SqlParameter("@Ngay", hoadon.Ngay));
+            paras.Add(new SqlParameter("@Gio", hoadon.Gio));
+
+            try
+            {
+                return (dp.executeNonQuery("ThemHoaDon", CommandType.StoredProcedure, paras));
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        //Them Ghe (RapPhim)
+        public int ThemGheDAL(GheDTO ghe)
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@MaRP", ghe.MaRapPhim));
+            paras.Add(new SqlParameter("@TenRP", ghe.TenRapPhim));
+            paras.Add(new SqlParameter("@MaPhim", ghe.MaPhim));
+            paras.Add(new SqlParameter("@TenPhim", ghe.TenPhim));
+            paras.Add(new SqlParameter("@NgayChieu", ghe.NgayChieu));
+            paras.Add(new SqlParameter("@GioChieu", ghe.GioChieu));
+            paras.Add(new SqlParameter("@SoGhe", ghe.SoGhe));
+
+            try
+            {
+                return (dp.executeNonQuery("ThemGhe", System.Data.CommandType.StoredProcedure, paras));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
         }
 
         public int ThemKhachHangDAL(KhachHangDTO khachhang)
@@ -210,7 +252,6 @@ namespace DAL
             {
                 throw ex;
             }
-
         }
 
         //Them Ve

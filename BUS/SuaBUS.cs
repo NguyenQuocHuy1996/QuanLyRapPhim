@@ -75,24 +75,5 @@ namespace BUS
                 throw ex;
             }
         }
-
-        ////Sua Ghe (RapPhim)
-        //public int Sua_GheBUS(RapPhimDTO rapphim)
-        //{
-        //    try
-        //    {
-        //        return (new SuaDAL().Sua_GheDAL(rapphim));
-        //    }
-        //    catch (SqlException ex)
-        //    {
-        //        throw ex;
-        //    }
-        //}
-
-        public void Insert_PhongChieuBUS(DTO.GheDTO rap)
-        {
-            DAL.SuaDAL sua = new SuaDAL();
-            sua.Insert_PhongChieuDAL(rap);
-        }
     }
 }

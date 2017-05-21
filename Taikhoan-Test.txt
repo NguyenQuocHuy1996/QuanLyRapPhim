@@ -1,0 +1,11 @@
+Cho quan ly
+	Tai khoan: quanly
+	Mat khau: 123
+
+Cho nhan vien ban ve
+	Tai khoan: quayve
+	Mat khau: 123
+
+Cho nhan vien ban thuc an
+	Tai khoan: quayan
+	Mat khau: 123

@@ -68,6 +68,23 @@ namespace DAL
             }
         }
 
+        //Xoa TheLoai
+        public int XoaTheLoaiDAL(TheLoaiDTO theloai)
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@TheLoai", theloai.TheLoai));
+
+            try
+            {
+                return (dp.executeNonQuery("XoaTheLoai", System.Data.CommandType.StoredProcedure, paras));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
         //Xoa LichChieu
         public int XoaLichChieuDAL(LichChieuDTO lichchieu)
         {
@@ -105,11 +122,28 @@ namespace DAL
             }
         }
 
+        //Xoa TaiKhoan
+        public int XoaTaiKhoanDAL(TaiKhoanDTO taikhoan)
+        {
+            List<SqlParameter> paras = new List<SqlParameter>();
+            paras.Add(new SqlParameter("@TaiKhoan", taikhoan.TaiKhoan));
+
+            try
+            {
+                return (dp.executeNonQuery("XoaTaiKhoan", System.Data.CommandType.StoredProcedure, paras));
+            }
+            catch (SqlException ex)
+            {
+
+                throw ex;
+            }
+        }
+
         //Xoa ThucAnTam
         public int XoaThucAnTamDAL(ThucAn_TamDTO thucan)
         {
             List<SqlParameter> paras = new List<SqlParameter>();
-            paras.Add(new SqlParameter("@ID", thucan.ID));
+            paras.Add(new SqlParameter("@TenTA", thucan.TenTA));
 
             try
             {

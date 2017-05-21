@@ -102,12 +102,38 @@ namespace BUS
             }
         }
 
+        //Them thuc an tam
+        public int ThemHoaDonBUS(HoaDonDTO hoadon)
+        {
+            try
+            {
+                return new ThemDAL().ThemHoaDonDAL(hoadon);
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
         //Them tai khoan
         public int ThemTaiKhoanBUS(TaiKhoanDTO taikhoan)
         {
             try
             {
                 return (new ThemDAL().ThemTaiKhoanDAL(taikhoan));
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        //Sua Ghe (RapPhim)
+        public int ThemGheBUS(GheDTO ghe)
+        {
+            try
+            {
+                return (new ThemDAL().ThemGheDAL(ghe));
             }
             catch (SqlException ex)
             {

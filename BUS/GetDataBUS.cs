@@ -134,6 +134,20 @@ namespace BUS
             }
         }
 
+        //Lấy thông tin trang thai ghe
+        public DataSet GetGheBUS(string sql)
+        {
+            try
+            {
+                return (new GetDataDAL().GetGheDAL(sql));
+
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
         //Lấy thông tin vé xem phim
         public DataSet GetVeBUS(string sql)
         {
@@ -141,32 +155,6 @@ namespace BUS
             {
                 return (new GetDataDAL().GetVeDAL(sql));
 
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-        }
-
-        //Lấy thông tin ngày chiếu
-        public DataSet GetNgayChieuBUS(string sql)
-        {
-            try
-            {
-                return (new GetDataDAL().GetNgayChieuDAL(sql));
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-        }
-
-        //Lấy thông tin giờ chiếu
-        public DataSet GetGioChieuBus(string sql)
-        {
-            try
-            {
-                return (new GetDataDAL().GetGioChieuDAL(sql));
             }
             catch (SqlException ex)
             {

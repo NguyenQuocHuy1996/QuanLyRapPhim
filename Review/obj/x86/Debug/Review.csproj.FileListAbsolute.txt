@@ -112,3 +112,4 @@ E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.Report.re
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.QuanLyTheLoai.resources
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.FormQuayVe.resources
 E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.FormQuayAn.resources
+E:\Hoc tap\Lập trình CSDL\QuanLyRapPhim\Review\obj\x86\Debug\Review.HoaDon.resources

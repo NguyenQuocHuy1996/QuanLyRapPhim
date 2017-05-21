@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 using DTO;
 using BUS;
@@ -15,180 +14,161 @@ namespace Review
 {
     public partial class Ghe : Form
     {
-        private bool c1, c2, c3, c4, c5;
-        private string MaPhim, TenPhim, NgayChieu, GioChieu;
-        //private List<string> SoGhe;
+        List<Label> listlabel = new List<Label>();
+        List<Label> removelabel = new List<Label>();
 
         public Ghe()
         {
             InitializeComponent();
         }
-        public Ghe(string label1, string label2, string label3, string label4)
-        {
-            InitializeComponent();
-            MaPhim = label1;
-            TenPhim = label2;
-            NgayChieu = label3;
-            GioChieu = label4;
-        }
 
         private void Ghe_Load(object sender, EventArgs e)
         {
-            c1 = c2 = c3 = c4 = c5 = false;
-            //SoGhe = new List<string>();
-            label1.Text = MaPhim;
-            label2.Text = TenPhim;
-            label3.Text = NgayChieu;
-            label4.Text = GioChieu;
-            dataGridView1.DataSource = GetRapPhim().Tables[0];
-            //Load trang thai
-            GetOneDataBUS  np = new GetOneDataBUS();
-            GheDTO rapphim = np.GetOnePhongChieuBUS(label1.Text);
-            checkBox1.Checked = Convert.ToBoolean(rapphim.G1.ToString());
-            checkBox2.Checked = Convert.ToBoolean(rapphim.G2.ToString());
-            checkBox3.Checked = Convert.ToBoolean(rapphim.G3.ToString());
-            checkBox4.Checked = Convert.ToBoolean(rapphim.G4.ToString());
-            checkBox5.Checked = Convert.ToBoolean(rapphim.G5.ToString());
+            cbTenRP.DataSource = GetData.GetRapPhim().Tables[0];
+            cbTenRP.DisplayMember = "TenRapPhim";
+            cbTenRP.ValueMember = "MaRapPhim";
 
-            cbDoiTuong.Items.Add("HS-SV");
-            cbDoiTuong.Items.Add("Người lớn");
-            cbDoiTuong.Items.Add("Voucher");
-            cbDoiTuong.Items.Add("Đặt vé");
+            cbTenPhim.DataSource = GetData.GetPhim().Tables[0];
+            cbTenPhim.DisplayMember = "TenPhim";
+            cbTenPhim.ValueMember = "MaPhim";
 
-            cbGiaVe.Items.Add("45000");
-            cbGiaVe.Items.Add("50000");
-            cbGiaVe.Items.Add("70000");
-            cbGiaVe.Items.Add("75000");
-
-            cbLoaiGhe.Items.Add("Thường");
-            cbLoaiGhe.Items.Add("VIP");
-            cbLoaiGhe.Items.Add("SweetBox");
-        }
-        private DataSet GetRapPhim()
-        {
-            string sql = "SELECT * FROM RapPhim where MaPhim= N'" + label1.Text + "'";
-            return (new GetDataBUS().GetPhongChieuBUS(sql));
-        }
-        private void CheckCB()
-        {
-            if (checkBox1.Checked)
+            for (int i = 0; i <= 7; i++)
             {
-                c1 = true;
-            }
-            else
-            {
-                c1 = false;
-            }
-            if (checkBox2.Checked)
-            {
-                c2 = true;
-            }
-            else
-            {
-                c2 = false;
-            }
-            if (checkBox3.Checked)
-            {
-                c3 = true;
-            }
-            else
-            {
-                c3 = false;
-            }
-            if (checkBox4.Checked)
-            {
-                c4 = true;
-            }
-            else
-            {
-                c4 = false;
-            }
-            if (checkBox5.Checked)
-            {
-                c5 = true;
-            }
-            else
-            {
-                c5 = false;
+                cbNgay.Items.Add(DateTime.Today.AddDays(+i).ToString().Substring(0, 10));
             }
         }
 
-        //Ghe FULL
-        private void checkBox1_MouseClick(object sender, MouseEventArgs e)
+        private void cbNgay_SelectedIndexChanged(object sender, EventArgs e)
         {
-            CheckBox chbbox = (CheckBox)sender;
-            if (chbbox.Checked == false)
+            cbGio.DataSource = GetData.GetGioChieu(cbTenRP.SelectedValue.ToString(), cbTenPhim.SelectedValue.ToString(), cbNgay.Text.ToString()).Tables[0];
+            cbGio.DisplayMember = "GioChieu";
+        }
+
+        private void cbGio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Remove_Label();
+            Create_Label();
+        }
+
+        private void btnXemGhe_Click(object sender, EventArgs e)
+        {
+            Create_Label();
+        }
+
+        private void btnMuaVe_Click(object sender, EventArgs e)
+        {
+            foreach (Label lb in listlabel)
+            {
+                lb.BackColor = Color.Orange;
+
+                string MaRP, TenRP, MaPhim, TenPhim, NgayChieu, GioChieu, SoGhe;
+
+                MaRP = Convert.ToString(cbTenRP.SelectedValue.ToString());
+                TenRP = Convert.ToString(cbTenRP.Text.ToString());
+                MaPhim = Convert.ToString(cbTenPhim.SelectedValue.ToString());
+                TenPhim = Convert.ToString(cbTenPhim.Text.ToString());
+                NgayChieu = Convert.ToString(cbNgay.SelectedItem.ToString());
+                GioChieu = Convert.ToString(cbGio.Text.ToString());
+                SoGhe = Convert.ToString(lb.Name);
+
+                GheDTO ghe = new GheDTO(MaRP, TenRP, MaPhim, TenPhim, NgayChieu, GioChieu, SoGhe);
+                int themghe = new ThemBUS().ThemGheBUS(ghe);
+            }
+            listlabel = new List<Label>();
+            MessageBox.Show("Mua vé thành công");
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            foreach (Label lb in listlabel)
+            {
+                lb.BackColor = Color.GhostWhite;
+            }
+            listlabel = new List<Label>();
+        }
+
+        private void Create_Label()
+        {
+            int top = 50; // Vi chi top
+            for (int i = 1; i <= 10; i++) // Tao ra 5 label doc
+            {
+                int left = 628; // Vi tri left 
+                for (int j = 1; j <= 10; j++) // Tao ra 5 label ngang
+                {
+                    Label lb = new Label();
+                    lb.Name = i.ToString() + j.ToString();
+                    lb.Text = j.ToString();
+                    lb.Tag = string.Format("[{0},{1}]", i, j);
+                    lb.Size = new Size(50, 50);
+                    lb.TextAlign = ContentAlignment.MiddleCenter;
+                    lb.Left = left += 60;
+                    lb.Top = top;
+                    lb.ForeColor = Color.Black;
+
+                    //Set màu cho ghế dựa vào trang thái
+                    if (GetData.GetGhe(cbTenRP.SelectedValue.ToString(), cbTenPhim.SelectedValue.ToString(), cbNgay.Text.ToString(), cbGio.Text.ToString(), lb.Name.ToString()).Tables[0].Rows.Count == 1) // Đã có
+                    {
+                        lb.BackColor = Color.Orange;
+                    }
+                    else //chưa có
+                    {
+                        lb.BackColor = Color.GhostWhite;
+                    }
+
+                    //Tạo sự kiên cho label và gán tới hàm sử lý sự kiện
+                    lb.Click += new EventHandler(lb_Click);
+
+                    this.Controls.Add(lb);
+
+                    removelabel.Add(lb);
+                }
+                top += 60;
+            }
+        }
+
+        private void lb_Click(object sender, EventArgs e)
+        {
+            Label lb = (Label)sender;
+
+            if (lb.BackColor != Color.Orange)
+            {
+                if (lb.BackColor == Color.GhostWhite)
+                {
+                    lb.BackColor = Color.Blue;
+                    listlabel.Add(lb);
+                }
+                else
+                {
+                    lb.BackColor = Color.GhostWhite;
+                    listlabel.Remove(lb);
+                }
+            }
+            else
             {
                 MessageBox.Show("Ghế đã có người ngồi");
-                chbbox.Checked = true;
             }
-
-            label5.Text = chbbox.Text;
         }
 
-        private void Button3_Click(object sender, EventArgs e)
+        private void Remove_Label()
         {
-            c1 = c2 = c3 = c4 = c5 = false;
+            foreach (Label l in removelabel)
+            {
+                this.Controls.Remove(l);
+            }
         }
 
-        private void btnBuy_Ticket_Click(object sender, EventArgs e)
+        private void Ghe_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Cập nhật lại trạng thái ghế
-            try
-            {                
-                DTO.GheDTO rap = new GheDTO();
+            FormQuayVe quayve = new FormQuayVe();
+            quayve.Show();
+            this.Hide();
+        }
 
-                CheckCB();
-                rap.MaPhim = label1.Text;
-                rap.G1 = c1;
-                rap.G2 = c2;
-                rap.G3 = c3;
-                rap.G4 = c4;
-                rap.G5 = c5;
-                BUS.SuaBUS sua = new SuaBUS();
-                sua.Insert_PhongChieuBUS(rap);
-
-                dataGridView1.DataSource = GetRapPhim().Tables[0];                
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-
-            //Thêm vào bản vé
-            try
-            {
-                string tenPhim, ngayChieu, gioChieu, soGhe, loaiGhe, doiTuong;
-                int giaVe;
-                tenPhim = Convert.ToString(label2.Text);
-                ngayChieu = Convert.ToString(label3.Text);
-                gioChieu = Convert.ToString(label4.Text);
-                soGhe = Convert.ToString(label5.Text);
-                loaiGhe = Convert.ToString(cbLoaiGhe.Text);
-                doiTuong = Convert.ToString(cbDoiTuong.Text);
-                giaVe = Convert.ToInt32(cbGiaVe.Text);
-
-                VeDTO ve = new VeDTO(tenPhim, ngayChieu, gioChieu, soGhe, loaiGhe, doiTuong, giaVe);
-                int themve = new ThemBUS().Them_VeBUS(ve);
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            MessageBox.Show("Mua vé thành công");
-            //Chuyen form
-            Review.Ve show = new Ve(label2.Text, label3.Text, label4.Text, label5.Text, cbLoaiGhe.Text, cbDoiTuong.Text,Convert.ToInt32(cbGiaVe.Text));
-            this.Visible = false;
-            show.ShowDialog();
-            this.Visible = true;
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            FormQuayVe quayve = new FormQuayVe();
+            quayve.Show();
+            this.Hide();
         }
     }
 }

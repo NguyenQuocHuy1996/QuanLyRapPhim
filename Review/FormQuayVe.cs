@@ -110,16 +110,23 @@ namespace Review
         
         }
 
-        private void btnLogOut_Click(object sender, EventArgs e)
+        private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            FormQuayVe show = new FormQuayVe();
-            show.Show();
+            Login login = new Login();
+            login.Show();
             this.Close();
         }
 
-        private void FormChinh_FormClosing(object sender, FormClosingEventArgs e)
+        private void FormQuayVe_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void btnChonGhe_Click(object sender, EventArgs e)
+        {
+            Ghe ghe = new Ghe();
+            ghe.Show();
+            this.Hide();
         }
     }
 }

@@ -132,47 +132,5 @@ namespace DAL
                 throw ex;
             }
         }
-
-        ////Sua Ghe (RapPhim)
-        //public int Sua_GheDAL(RapPhimDTO rapphim)
-        //{
-        //    List<SqlParameter> paras = new List<SqlParameter>();
-        //    paras.Add(new SqlParameter("@MaPhim", rapphim.MaPhim));
-        //    paras.Add(new SqlParameter("@G1", rapphim.G1));
-        //    paras.Add(new SqlParameter("@G2", rapphim.G2));
-        //    paras.Add(new SqlParameter("@G3", rapphim.G3));
-        //    paras.Add(new SqlParameter("@G4", rapphim.G4));
-        //    paras.Add(new SqlParameter("@G5", rapphim.G5));
-
-        //    try
-        //    {
-        //        return (dp.executeNonQuery("SuaGhe", System.Data.CommandType.StoredProcedure, paras));
-        //    }
-        //    catch (SqlException ex)
-        //    {
-
-        //        throw ex;
-        //    }
-        //}
-
-        ////Sua Ghe (PHongChieu)
-        public void Insert_PhongChieuDAL(DTO.GheDTO rap)
-        {
-            string query = "Update PhongChieu Set G1='" + rap.G1 + "',G2='" + rap.G2 + "',G3='" + rap.G3 + "',G4='" + rap.G4 + "',G5='" + rap.G5 + "' Where MaPhim = N'" + rap.MaPhim + "'";
-            try
-            {
-                dp.Connect();
-                SqlCommand cmd = new SqlCommand(query, dp.cn);
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                dp.DisConnect();
-            }
-        }
     }
 }

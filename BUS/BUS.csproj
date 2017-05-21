@@ -43,6 +43,7 @@
     <Compile Include="GetDataBUS.cs" />
     <Compile Include="GetOneDataBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResetIndexBUS.cs" />
     <Compile Include="SuaBUS.cs" />
     <Compile Include="ThemBUS.cs" />
     <Compile Include="XoaBUS.cs" />

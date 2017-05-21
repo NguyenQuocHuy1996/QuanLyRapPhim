@@ -73,7 +73,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(142, 133);
+            this.btnLogin.Location = new System.Drawing.Point(140, 150);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 35);
             this.btnLogin.TabIndex = 4;
@@ -84,9 +84,9 @@
             // lbThongBao
             // 
             this.lbThongBao.ForeColor = System.Drawing.Color.Red;
-            this.lbThongBao.Location = new System.Drawing.Point(46, 109);
+            this.lbThongBao.Location = new System.Drawing.Point(46, 119);
             this.lbThongBao.Name = "lbThongBao";
-            this.lbThongBao.Size = new System.Drawing.Size(262, 25);
+            this.lbThongBao.Size = new System.Drawing.Size(262, 28);
             this.lbThongBao.TabIndex = 6;
             this.lbThongBao.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -116,7 +116,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(375, 180);
+            this.ClientSize = new System.Drawing.Size(375, 197);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cbPass);
             this.Controls.Add(this.lbThongBao);
@@ -130,6 +130,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Login_FormClosing);
             this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

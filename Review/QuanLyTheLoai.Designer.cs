@@ -32,7 +32,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtTheLoai = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTheLoai)).BeginInit();
@@ -74,19 +73,9 @@
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Location = new System.Drawing.Point(118, 32);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(100, 45);
-            this.btnUpdate.TabIndex = 4;
-            this.btnUpdate.Text = "Sửa";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(224, 32);
+            this.btnDelete.Location = new System.Drawing.Point(118, 32);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(100, 45);
             this.btnDelete.TabIndex = 5;
@@ -96,7 +85,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(224, 83);
+            this.btnClose.Location = new System.Drawing.Point(224, 32);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(100, 45);
             this.btnClose.TabIndex = 6;
@@ -111,7 +100,6 @@
             this.ClientSize = new System.Drawing.Size(581, 164);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtTheLoai);
             this.Controls.Add(this.label1);
@@ -132,7 +120,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtTheLoai;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClose;
     }

@@ -39,6 +39,11 @@ namespace DTO
             TheLoai = theLoai;
         }
 
+        public PhimDTO(string maPhim)
+        {
+            MaPhim = maPhim;
+        }
+
         public PhimDTO()
         {
 

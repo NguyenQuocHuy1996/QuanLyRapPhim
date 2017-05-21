@@ -36,6 +36,7 @@
             this.btnNhanVien = new System.Windows.Forms.Button();
             this.btnBaoCao = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnTaiKhoan = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbuser
@@ -129,7 +130,7 @@
             this.btnBaoCao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBaoCao.Image = global::Review.Properties.Resources.IconBaoCao;
             this.btnBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBaoCao.Location = new System.Drawing.Point(12, 292);
+            this.btnBaoCao.Location = new System.Drawing.Point(12, 348);
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.Size = new System.Drawing.Size(170, 50);
             this.btnBaoCao.TabIndex = 13;
@@ -146,6 +147,22 @@
             this.btnDangXuat.TabIndex = 14;
             this.btnDangXuat.Text = "Đăng xuất";
             this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // btnTaiKhoan
+            // 
+            this.btnTaiKhoan.BackColor = System.Drawing.Color.White;
+            this.btnTaiKhoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTaiKhoan.Image = global::Review.Properties.Resources.IconNhanVien;
+            this.btnTaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTaiKhoan.Location = new System.Drawing.Point(12, 292);
+            this.btnTaiKhoan.Name = "btnTaiKhoan";
+            this.btnTaiKhoan.Size = new System.Drawing.Size(170, 50);
+            this.btnTaiKhoan.TabIndex = 12;
+            this.btnTaiKhoan.Text = "Quản lý tài khoản";
+            this.btnTaiKhoan.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnTaiKhoan.UseVisualStyleBackColor = false;
+            this.btnTaiKhoan.Click += new System.EventHandler(this.btnTaiKhoan_Click);
             // 
             // FormQuanLy
             // 
@@ -156,6 +173,7 @@
             this.ClientSize = new System.Drawing.Size(1350, 692);
             this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.btnBaoCao);
+            this.Controls.Add(this.btnTaiKhoan);
             this.Controls.Add(this.btnNhanVien);
             this.Controls.Add(this.btnLichChieu);
             this.Controls.Add(this.btnPhim);
@@ -181,5 +199,6 @@
         private System.Windows.Forms.Button btnNhanVien;
         private System.Windows.Forms.Button btnBaoCao;
         private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.Button btnTaiKhoan;
     }
 }

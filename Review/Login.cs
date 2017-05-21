@@ -47,7 +47,7 @@ namespace Review
             {
                 try
                 {
-                    dt = GetData.GetTaiKhoanDK(txtTaiKhoan.Text, txtMatKhau.Text);
+                    dt = GetData.GetTaiKhoanDK(txtTaiKhoan.Text);
                     if (dt.Tables[0].Rows.Count == 1)
                     {
                         lbThongBao.Text = "Đăng nhập thành công";
@@ -58,16 +58,19 @@ namespace Review
                         {
                             FormQuayVe quayve = new FormQuayVe(taikhoan, quyen);
                             quayve.Show();
+                            this.Hide();
                         }
                         else if (quyen == "Nhân viên quầy ăn")
                         {
                             FormQuayAn quayan = new FormQuayAn(taikhoan, quyen);
                             quayan.Show();
+                            this.Hide();
                         }
                         else
                         {
                             FormQuanLy quanly = new FormQuanLy(taikhoan, quyen);
                             quanly.Show();
+                            this.Hide();
                         }
                     }
                     else
@@ -82,12 +85,6 @@ namespace Review
             }
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            Register formRegister = new Register();
-            formRegister.ShowDialog();
-        }
-
         private void cbPass_CheckedChanged(object sender, EventArgs e)
         {
             if (cbPass.Checked)
@@ -98,6 +95,11 @@ namespace Review
             {
                 txtMatKhau.UseSystemPasswordChar = true;
             }
+        }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

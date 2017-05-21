@@ -50,6 +50,19 @@ namespace BUS
             }
         }
 
+        //Xoa TheLoai
+        public int XoaTheLoaiBUS(TheLoaiDTO theloai)
+        {
+            try
+            {
+                return (new XoaDAL().XoaTheLoaiDAL(theloai));
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
         //Xoa LichChieu
         public int XoaLichChieuBUS(LichChieuDTO lichchieu)
         {
@@ -69,6 +82,19 @@ namespace BUS
             try
             {
                 return (new XoaDAL().XoaNhanVienDAL(nhanvien));
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+        }
+
+        //Xoa TaiKhoan
+        public int XoaTaiKhoanBUS(TaiKhoanDTO taikhoan)
+        {
+            try
+            {
+                return (new XoaDAL().XoaTaiKhoanDAL(taikhoan));
             }
             catch (SqlException ex)
             {

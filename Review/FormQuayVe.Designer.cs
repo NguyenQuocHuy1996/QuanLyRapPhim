@@ -50,6 +50,8 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnDangXuat = new System.Windows.Forms.Button();
+            this.btnChonGhe = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -68,9 +70,9 @@
             this.lbUser.BackColor = System.Drawing.Color.Transparent;
             this.lbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbUser.Location = new System.Drawing.Point(1174, 9);
+            this.lbUser.Location = new System.Drawing.Point(1111, 12);
             this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(164, 27);
+            this.lbUser.Size = new System.Drawing.Size(149, 27);
             this.lbUser.TabIndex = 12;
             this.lbUser.Text = "Xin chào";
             this.lbUser.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -78,6 +80,7 @@
             // label1
             // 
             this.label1.AllowDrop = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(13, 222);
             this.label1.Name = "label1";
@@ -89,6 +92,7 @@
             // label2
             // 
             this.label2.AllowDrop = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(243, 222);
             this.label2.Name = "label2";
@@ -100,6 +104,7 @@
             // label3
             // 
             this.label3.AllowDrop = true;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(473, 222);
             this.label3.Name = "label3";
@@ -111,6 +116,7 @@
             // label4
             // 
             this.label4.AllowDrop = true;
+            this.label4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(703, 222);
             this.label4.Name = "label4";
@@ -122,6 +128,7 @@
             // label5
             // 
             this.label5.AllowDrop = true;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(930, 222);
             this.label5.Name = "label5";
@@ -133,6 +140,7 @@
             // label6
             // 
             this.label6.AllowDrop = true;
+            this.label6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(15, 498);
             this.label6.Name = "label6";
@@ -144,6 +152,7 @@
             // label7
             // 
             this.label7.AllowDrop = true;
+            this.label7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(243, 498);
             this.label7.Name = "label7";
@@ -155,6 +164,7 @@
             // label8
             // 
             this.label8.AllowDrop = true;
+            this.label8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(470, 498);
             this.label8.Name = "label8";
@@ -166,6 +176,7 @@
             // label9
             // 
             this.label9.AllowDrop = true;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(703, 498);
             this.label9.Name = "label9";
@@ -177,6 +188,7 @@
             // label10
             // 
             this.label10.AllowDrop = true;
+            this.label10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(930, 498);
             this.label10.Name = "label10";
@@ -187,6 +199,8 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Location = new System.Drawing.Point(13, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(150, 200);
@@ -196,6 +210,8 @@
             // 
             // pictureBox2
             // 
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox2.Location = new System.Drawing.Point(243, 19);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(150, 200);
@@ -205,6 +221,8 @@
             // 
             // pictureBox3
             // 
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox3.Location = new System.Drawing.Point(473, 19);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(150, 200);
@@ -214,6 +232,8 @@
             // 
             // pictureBox4
             // 
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.Location = new System.Drawing.Point(703, 19);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(150, 200);
@@ -223,6 +243,8 @@
             // 
             // pictureBox5
             // 
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox5.Location = new System.Drawing.Point(933, 19);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(150, 200);
@@ -232,6 +254,8 @@
             // 
             // pictureBox6
             // 
+            this.pictureBox6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox6.Location = new System.Drawing.Point(15, 295);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(150, 200);
@@ -241,6 +265,8 @@
             // 
             // pictureBox7
             // 
+            this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.Location = new System.Drawing.Point(243, 295);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(150, 200);
@@ -250,6 +276,8 @@
             // 
             // pictureBox8
             // 
+            this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.Location = new System.Drawing.Point(473, 295);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(150, 200);
@@ -259,6 +287,8 @@
             // 
             // pictureBox9
             // 
+            this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox9.Location = new System.Drawing.Point(703, 295);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(150, 200);
@@ -268,6 +298,8 @@
             // 
             // pictureBox10
             // 
+            this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox10.Location = new System.Drawing.Point(933, 295);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(150, 200);
@@ -298,11 +330,32 @@
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Cursor = System.Windows.Forms.Cursors.Default;
             this.groupBox1.Location = new System.Drawing.Point(12, 9);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1093, 581);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
+            // 
+            // btnDangXuat
+            // 
+            this.btnDangXuat.Location = new System.Drawing.Point(1266, 12);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.Size = new System.Drawing.Size(72, 27);
+            this.btnDangXuat.TabIndex = 34;
+            this.btnDangXuat.Text = "Đăng xuất";
+            this.btnDangXuat.UseVisualStyleBackColor = true;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // btnChonGhe
+            // 
+            this.btnChonGhe.Location = new System.Drawing.Point(1114, 515);
+            this.btnChonGhe.Name = "btnChonGhe";
+            this.btnChonGhe.Size = new System.Drawing.Size(224, 75);
+            this.btnChonGhe.TabIndex = 35;
+            this.btnChonGhe.Text = "Chọn ghế";
+            this.btnChonGhe.UseVisualStyleBackColor = true;
+            this.btnChonGhe.Click += new System.EventHandler(this.btnChonGhe_Click);
             // 
             // FormQuayVe
             // 
@@ -311,6 +364,8 @@
             this.BackgroundImage = global::Review.Properties.Resources.RapPhim;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1350, 692);
+            this.Controls.Add(this.btnChonGhe);
+            this.Controls.Add(this.btnDangXuat);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbUser);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -318,7 +373,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý rạp phim";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormChinh_FormClosing);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormQuayVe_FormClosing);
             this.Load += new System.EventHandler(this.FormChinh_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -359,5 +414,7 @@
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnDangXuat;
+        private System.Windows.Forms.Button btnChonGhe;
     }
 }

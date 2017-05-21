@@ -24,9 +24,13 @@ namespace DTO
             ChucVu = chucvu;
         }
 
-        public TaiKhoanDTO()
+        public TaiKhoanDTO(string taikhoan)
         {
+            TaiKhoan = taikhoan;
+        }
 
+        public TaiKhoanDTO()
+        {            
         }
     }
 }

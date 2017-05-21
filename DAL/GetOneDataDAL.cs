@@ -47,39 +47,6 @@ namespace DAL
             return RapPhim;
         }
 
-        //Lấy thông tin 1 phòng chiếu dựa vào mã phim
-        public GheDTO GetOnePhongChieuDAL(string maphim)
-        {
-            GheDTO PhongChieu = new GheDTO();
-            string query = "Select * From RapPhim Where MaPhim = '" + maphim + "'";
-            try
-            {
-                dp.Connect();
-                SqlCommand cmd = new SqlCommand(query, dp.cn);
-                SqlDataReader read = cmd.ExecuteReader();
-                while (read.Read())
-                {
-                    PhongChieu.MaRapPhim = read.GetString(0);
-                    PhongChieu.TenRapPhim = read.GetString(1);
-                    PhongChieu.MaPhim = read.GetString(2);
-                    PhongChieu.G1 = read.GetBoolean(3);
-                    PhongChieu.G2 = read.GetBoolean(4);
-                    PhongChieu.G3 = read.GetBoolean(5);
-                    PhongChieu.G4 = read.GetBoolean(6);
-                    PhongChieu.G5 = read.GetBoolean(7);
-                }
-            }
-            catch (SqlException ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                dp.DisConnect();
-            }
-            return PhongChieu;
-        }
-
         //Lay 1 đối tượng phim dua vao MaPhim
         public PhimDTO GetOnePhimDAL(string maphim)
         {
