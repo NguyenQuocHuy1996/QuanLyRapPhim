@@ -94,6 +94,7 @@ namespace DAL
             paras.Add(new SqlParameter("@MaPhim", lichchieu.MaPhim));
             paras.Add(new SqlParameter("@NgayChieu", lichchieu.NgayChieu));
             paras.Add(new SqlParameter("@GioChieu", lichchieu.GioChieu));
+            paras.Add(new SqlParameter("@DinhDang", lichchieu.DinhDang));
 
             try
             {

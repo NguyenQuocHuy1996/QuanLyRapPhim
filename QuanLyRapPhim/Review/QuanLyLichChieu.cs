@@ -135,19 +135,16 @@ namespace Review
             try
             {
                 //Khai bao bien tam
-                string MaRP, TenRP, MaPC, TenPC, MaPhim, TenPhim, NgayChieu, GioChieu, DinhDang;
+                string MaRP, MaPC, MaPhim, NgayChieu, GioChieu, DinhDang;
                 //Lay gia tri can them
-                MaRP = Convert.ToString(cbTenRapPhim.SelectedValue.ToString());
-                TenRP = Convert.ToString(cbTenRapPhim.Text);
-                MaPC = Convert.ToString(cbTenPhongChieu.SelectedValue.ToString());
-                TenPC = Convert.ToString(cbTenPhongChieu.Text);
-                MaPhim = Convert.ToString(cbTenPhim.SelectedValue.ToString());
-                TenPhim = Convert.ToString(cbTenPhim.Text);
-                NgayChieu = Convert.ToString(cbNgayChieu.Text);
-                GioChieu = Convert.ToString(cbGioChieu.Text);
-                DinhDang = Convert.ToString(cbDinhDang.Text);
+                MaRP = dgvLichChieu.CurrentRow.Cells[0].Value.ToString().Trim();
+                MaPC = dgvLichChieu.CurrentRow.Cells[2].Value.ToString().Trim();
+                MaPhim = dgvLichChieu.CurrentRow.Cells[4].Value.ToString().Trim();
+                NgayChieu = dgvLichChieu.CurrentRow.Cells[6].Value.ToString().Trim();
+                GioChieu = dgvLichChieu.CurrentRow.Cells[7].Value.ToString().Trim();
+                DinhDang = dgvLichChieu.CurrentRow.Cells[8].Value.ToString().Trim();
                 //Tao ra doi tuong can them
-                LichChieuDTO lichchieu = new LichChieuDTO(MaRP, TenRP, MaPC, TenPC, MaPhim, TenPhim, NgayChieu, GioChieu, DinhDang);
+                LichChieuDTO lichchieu = new LichChieuDTO(MaRP,MaPC, MaPhim, NgayChieu, GioChieu, DinhDang);
                 //Xoa vao doi tuong vua tao
                 int xoalichchieu = new XoaBUS().XoaLichChieuBUS(lichchieu);
                 //Cap nhat lai dgv va dua ra thong bao

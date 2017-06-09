@@ -25,6 +25,12 @@ namespace Review
             return new GetDataBUS().GetRapPhimBUS(sql);
         }
 
+        public static DataSet GetRapPhimDK2(string manv)
+        {
+            string sql = "SELECT * FROM RapPhim WHERE MaNV = N'"+manv+"'";
+            return new GetDataBUS().GetRapPhimBUS(sql);
+        }
+
         //Lấy thông tin phòng chiếu
         public static DataSet GetPhongChieu()
         {
@@ -149,6 +155,12 @@ namespace Review
         public static DataSet GetTaiKhoanDK(string acc)
         {
             string sql = "Select * FROM TaiKhoan where TaiKhoan=N'" + acc + "'";
+            return new GetDataBUS().GetTaiKhoanBUS(sql);
+        }
+
+        public static DataSet GetTaiKhoanDK2(string acc, string pass)
+        {
+            string sql = "Select * FROM TaiKhoan where TaiKhoan=N'" + acc + "' and MatKhau = N'" + pass + "'";
             return new GetDataBUS().GetTaiKhoanBUS(sql);
         }
     }

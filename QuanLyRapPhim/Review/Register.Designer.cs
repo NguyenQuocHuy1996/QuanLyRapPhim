@@ -48,6 +48,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnDeleteAcc = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTK)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNV)).BeginInit();
@@ -137,7 +138,7 @@
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(96, 247);
+            this.btnRegister.Location = new System.Drawing.Point(47, 248);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(104, 40);
             this.btnRegister.TabIndex = 12;
@@ -177,20 +178,22 @@
             // 
             // dgvTK
             // 
+            this.dgvTK.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTK.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTK.Dock = System.Windows.Forms.DockStyle.Right;
-            this.dgvTK.Location = new System.Drawing.Point(611, 0);
+            this.dgvTK.Location = new System.Drawing.Point(696, 0);
             this.dgvTK.Name = "dgvTK";
-            this.dgvTK.Size = new System.Drawing.Size(303, 372);
+            this.dgvTK.Size = new System.Drawing.Size(498, 372);
             this.dgvTK.TabIndex = 26;
             // 
             // dgvNV
             // 
+            this.dgvNV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNV.Dock = System.Windows.Forms.DockStyle.Left;
             this.dgvNV.Location = new System.Drawing.Point(0, 0);
             this.dgvNV.Name = "dgvNV";
-            this.dgvNV.Size = new System.Drawing.Size(300, 372);
+            this.dgvNV.Size = new System.Drawing.Size(385, 372);
             this.dgvNV.TabIndex = 27;
             this.dgvNV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNV_CellClick);
             // 
@@ -244,6 +247,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Lavender;
+            this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.btnDeleteAcc);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtMaNV);
@@ -262,15 +266,25 @@
             this.groupBox1.Controls.Add(this.btnRegister);
             this.groupBox1.Controls.Add(this.txtRePass);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(306, 12);
+            this.groupBox1.Location = new System.Drawing.Point(391, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(299, 348);
             this.groupBox1.TabIndex = 33;
             this.groupBox1.TabStop = false;
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(95, 294);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(104, 40);
+            this.btnClear.TabIndex = 34;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // btnDeleteAcc
             // 
-            this.btnDeleteAcc.Location = new System.Drawing.Point(96, 293);
+            this.btnDeleteAcc.Location = new System.Drawing.Point(157, 249);
             this.btnDeleteAcc.Name = "btnDeleteAcc";
             this.btnDeleteAcc.Size = new System.Drawing.Size(104, 40);
             this.btnDeleteAcc.TabIndex = 33;
@@ -282,7 +296,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(914, 372);
+            this.ClientSize = new System.Drawing.Size(1194, 372);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvNV);
             this.Controls.Add(this.dgvTK);
@@ -322,5 +336,6 @@
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnDeleteAcc;
+        private System.Windows.Forms.Button btnClear;
     }
 }

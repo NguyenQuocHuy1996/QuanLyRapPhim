@@ -59,20 +59,20 @@ namespace Review
                 NgayVaoLam = Convert.ToString(txtNgayVaoLam.Text);
                 SDT = Convert.ToInt32(txtSoDT.Text);
 
-                NhanVienDTO nhanvien = new NhanVienDTO(MaNV,TenNV,NgaySinh,GioiTinh,SoCMND,DiaChi,SDT,Email,ChucVu,NgayVaoLam);
+                NhanVienDTO nhanvien = new NhanVienDTO(MaNV, TenNV, NgaySinh, GioiTinh, SoCMND, DiaChi, SDT, Email, ChucVu, NgayVaoLam);
                 int themnhanvien = new ThemBUS().ThemNhanVienBUS(nhanvien);
 
                 dgvNhanVien.DataSource = GetData.GetNhanVien().Tables[0];
 
                 MessageBox.Show("Thêm phim thành công");
             }
-            catch (SqlException)
+            catch (SqlException ex)
             {
-                MessageBox.Show("Mã phim đã có, nhập mã khác");
+                MessageBox.Show(ex.Message);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Chọn hình ảnh");
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -94,22 +94,32 @@ namespace Review
                 NgayVaoLam = Convert.ToString(txtNgayVaoLam.Text);
                 SDT = Convert.ToInt32(txtSoDT.Text);
 
-                NhanVienDTO nhanvien = new NhanVienDTO(MaNV, TenNV, NgaySinh, GioiTinh, SoCMND, DiaChi, SDT, Email, ChucVu, NgayVaoLam);
-                int suanhanvien = new SuaBUS().SuaNhanVienBUS(nhanvien);
+                if (GetData.GetRapPhimDK2(txtMaNV.Text).Tables[0].Rows.Count >= 1)
+                {
+                    MessageBox.Show("Nhân viên này đang quản lý 1 trong các rạp phim. Cập nhật lại nhân viên quản lý trước khi thực hiện việc thay đổi chức vụ");
+                }
+                else if (dgvNhanVien.CurrentRow.Cells[8].Value.ToString().Trim() == "Admin")
+                {
+                    MessageBox.Show("Đây là Admin, không thể thay đổi chức vụ");
+                }
+                else
+                {
+                    NhanVienDTO nhanvien = new NhanVienDTO(MaNV, TenNV, NgaySinh, GioiTinh, SoCMND, DiaChi, SDT, Email, ChucVu, NgayVaoLam);
+                    int suanhanvien = new SuaBUS().SuaNhanVienBUS(nhanvien);
 
-                dgvNhanVien.DataSource = GetData.GetNhanVien().Tables[0];
+                    dgvNhanVien.DataSource = GetData.GetNhanVien().Tables[0];
 
-                MessageBox.Show("Sửa nhân viên thành công");
+                    MessageBox.Show("Sửa nhân viên thành công");
+                }
             }
-            catch (SqlException)
+            catch (SqlException ex)
             {
-                MessageBox.Show("Mã phim đã có, nhập mã khác");
+                MessageBox.Show(ex.Message);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Chọn hình ảnh");
+                MessageBox.Show(ex.Message);
             }
-
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -130,20 +140,32 @@ namespace Review
                 NgayVaoLam = Convert.ToString(txtNgayVaoLam.Text);
                 SDT = Convert.ToInt32(txtSoDT.Text);
 
-                NhanVienDTO nhanvien = new NhanVienDTO(MaNV, TenNV, NgaySinh, GioiTinh, SoCMND, DiaChi, SDT, Email, ChucVu, NgayVaoLam);
-                int xoanhanvien = new XoaBUS().XoaNhanVienBUS(nhanvien);
+                if (GetData.GetRapPhimDK2(txtMaNV.Text).Tables[0].Rows.Count >= 1)
+                {
+                    MessageBox.Show("Nhân viên này đang quản lý 1 trong các rạp phim. Cập nhật lại nhân viên quản lý trước khi thực hiện xóa");
+                }
+                else if (dgvNhanVien.CurrentRow.Cells[8].Value.ToString().Trim() == "Admin")
+                {
+                    MessageBox.Show("Đây là Admin, không thể xóa");
+                }
+                else
+                {
 
-                dgvNhanVien.DataSource = GetData.GetNhanVien().Tables[0];
+                    NhanVienDTO nhanvien = new NhanVienDTO(MaNV, TenNV, NgaySinh, GioiTinh, SoCMND, DiaChi, SDT, Email, ChucVu, NgayVaoLam);
+                    int xoanhanvien = new XoaBUS().XoaNhanVienBUS(nhanvien);
 
-                MessageBox.Show("Xóa nhân viên thành công");
+                    dgvNhanVien.DataSource = GetData.GetNhanVien().Tables[0];
+
+                    MessageBox.Show("Xóa nhân viên thành công");
+                }
             }
-            catch (SqlException)
+            catch (SqlException ex)
             {
-                MessageBox.Show("Mã phim đã có, nhập mã khác");
+                MessageBox.Show(ex.Message);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Chọn hình ảnh");
+                MessageBox.Show(ex.Message);
             }
 
         }

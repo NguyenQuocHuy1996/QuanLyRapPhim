@@ -118,7 +118,7 @@
             this.cbTenNhanVien.Location = new System.Drawing.Point(112, 109);
             this.cbTenNhanVien.Name = "cbTenNhanVien";
             this.cbTenNhanVien.Size = new System.Drawing.Size(205, 21);
-            this.cbTenNhanVien.TabIndex = 7;
+            this.cbTenNhanVien.TabIndex = 3;
             this.cbTenNhanVien.SelectedIndexChanged += new System.EventHandler(this.cbTenNhanVien_SelectedIndexChanged);
             // 
             // txtTenRapPhim
@@ -126,7 +126,7 @@
             this.txtTenRapPhim.Location = new System.Drawing.Point(112, 38);
             this.txtTenRapPhim.Name = "txtTenRapPhim";
             this.txtTenRapPhim.Size = new System.Drawing.Size(100, 20);
-            this.txtTenRapPhim.TabIndex = 8;
+            this.txtTenRapPhim.TabIndex = 1;
             // 
             // txtDiaChi
             // 
@@ -136,7 +136,7 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDiaChi.Size = new System.Drawing.Size(205, 39);
-            this.txtDiaChi.TabIndex = 9;
+            this.txtDiaChi.TabIndex = 2;
             // 
             // txtMaNhanVien
             // 
@@ -145,7 +145,7 @@
             this.txtMaNhanVien.Name = "txtMaNhanVien";
             this.txtMaNhanVien.ReadOnly = true;
             this.txtMaNhanVien.Size = new System.Drawing.Size(100, 20);
-            this.txtMaNhanVien.TabIndex = 10;
+            this.txtMaNhanVien.TabIndex = 4;
             // 
             // groupBox1
             // 
@@ -177,7 +177,7 @@
             this.txtMaRP.Location = new System.Drawing.Point(112, 11);
             this.txtMaRP.Name = "txtMaRP";
             this.txtMaRP.Size = new System.Drawing.Size(100, 20);
-            this.txtMaRP.TabIndex = 15;
+            this.txtMaRP.TabIndex = 0;
             // 
             // btnClear
             // 

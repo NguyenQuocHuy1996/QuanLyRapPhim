@@ -46,15 +46,15 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnTheLoai = new System.Windows.Forms.Button();
+            this.txtMaPhim = new System.Windows.Forms.TextBox();
             this.btnClear = new System.Windows.Forms.Button();
             this.cbTheLoai = new System.Windows.Forms.ComboBox();
             this.btnClose = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.picImage = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtMaPhim = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhim)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
@@ -85,14 +85,14 @@
             this.txtDaoDien.Location = new System.Drawing.Point(105, 94);
             this.txtDaoDien.Name = "txtDaoDien";
             this.txtDaoDien.Size = new System.Drawing.Size(234, 20);
-            this.txtDaoDien.TabIndex = 2;
+            this.txtDaoDien.TabIndex = 3;
             // 
             // txtNam
             // 
             this.txtNam.Location = new System.Drawing.Point(105, 147);
             this.txtNam.Name = "txtNam";
             this.txtNam.Size = new System.Drawing.Size(100, 20);
-            this.txtNam.TabIndex = 3;
+            this.txtNam.TabIndex = 4;
             // 
             // txtThoiLuong
             // 
@@ -106,7 +106,7 @@
             this.txtQuocGia.Location = new System.Drawing.Point(284, 146);
             this.txtQuocGia.Name = "txtQuocGia";
             this.txtQuocGia.Size = new System.Drawing.Size(100, 20);
-            this.txtQuocGia.TabIndex = 4;
+            this.txtQuocGia.TabIndex = 5;
             // 
             // label2
             // 
@@ -183,7 +183,7 @@
             this.txtHinhAnh.Location = new System.Drawing.Point(105, 173);
             this.txtHinhAnh.Name = "txtHinhAnh";
             this.txtHinhAnh.Size = new System.Drawing.Size(234, 20);
-            this.txtHinhAnh.TabIndex = 18;
+            this.txtHinhAnh.TabIndex = 6;
             // 
             // btnChonAnh
             // 
@@ -241,7 +241,7 @@
             this.groupBox1.Location = new System.Drawing.Point(-1, 261);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(453, 311);
-            this.groupBox1.TabIndex = 25;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // btnTheLoai
@@ -253,6 +253,13 @@
             this.btnTheLoai.Text = "Quản lý thế loại";
             this.btnTheLoai.UseVisualStyleBackColor = true;
             this.btnTheLoai.Click += new System.EventHandler(this.btnTheLoai_Click);
+            // 
+            // txtMaPhim
+            // 
+            this.txtMaPhim.Location = new System.Drawing.Point(105, 15);
+            this.txtMaPhim.Name = "txtMaPhim";
+            this.txtMaPhim.Size = new System.Drawing.Size(113, 20);
+            this.txtMaPhim.TabIndex = 0;
             // 
             // btnClear
             // 
@@ -271,7 +278,7 @@
             this.cbTheLoai.Location = new System.Drawing.Point(105, 67);
             this.cbTheLoai.Name = "cbTheLoai";
             this.cbTheLoai.Size = new System.Drawing.Size(234, 21);
-            this.cbTheLoai.TabIndex = 29;
+            this.cbTheLoai.TabIndex = 2;
             // 
             // btnClose
             // 
@@ -287,6 +294,16 @@
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 16);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Mã Phim:";
             // 
             // btnThem
             // 
@@ -337,23 +354,6 @@
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picImage.TabIndex = 19;
             this.picImage.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 16);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Mã Phim:";
-            // 
-            // txtMaPhim
-            // 
-            this.txtMaPhim.Location = new System.Drawing.Point(105, 15);
-            this.txtMaPhim.Name = "txtMaPhim";
-            this.txtMaPhim.Size = new System.Drawing.Size(113, 20);
-            this.txtMaPhim.TabIndex = 30;
             // 
             // QuanLyPhim
             // 

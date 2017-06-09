@@ -30,6 +30,17 @@ namespace DTO
             DinhDang = dinhDang;
         }
 
+        public LichChieuDTO(string maRP, string maPC, string maPhim, string ngayChieu, string gioChieu, string dinhDang)
+        {
+            MaRP = maRP;
+            MaPC = maPC;
+            MaPhim = maPhim;
+            NgayChieu = ngayChieu;
+            GioChieu = gioChieu;
+            DinhDang = dinhDang;
+
+        }
+
         public LichChieuDTO()
         {
 

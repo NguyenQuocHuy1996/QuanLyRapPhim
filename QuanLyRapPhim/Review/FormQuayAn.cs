@@ -110,6 +110,7 @@ namespace Review
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
+            check = false;
             MessageBox.Show("Thanh toán thành công");
         }
 
@@ -141,7 +142,7 @@ namespace Review
         {
             Login login = new Login();
             login.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void FormQuayAn_FormClosing(object sender, FormClosingEventArgs e)
@@ -166,26 +167,32 @@ namespace Review
 
         private void btnTang_Click(object sender, EventArgs e)
         {
-            string tenthucan;
+            if (check == true)
+            {
+                string tenthucan;
 
-            tenthucan = label2.Text;
+                tenthucan = label2.Text;
 
-            ThucAn_TamDTO thucan = new ThucAn_TamDTO(tenthucan);
-            int tangthucantam = new SuaBUS().TangThucAnTamBUS(thucan);
+                ThucAn_TamDTO thucan = new ThucAn_TamDTO(tenthucan);
+                int tangthucantam = new SuaBUS().TangThucAnTamBUS(thucan);
 
-            dgvThucAnTam.DataSource = GetData.GetThucAnTam().Tables[0];
+                dgvThucAnTam.DataSource = GetData.GetThucAnTam().Tables[0];
+            }
         }
 
         private void btnGiam_Click(object sender, EventArgs e)
         {
-            string tenthucan;
+            if (check == true)
+            {
+                string tenthucan;
 
-            tenthucan = label2.Text;
+                tenthucan = label2.Text;
 
-            ThucAn_TamDTO thucan = new ThucAn_TamDTO(tenthucan);
-            int giamthucantam = new SuaBUS().GiamThucAnTamBUS(thucan);
+                ThucAn_TamDTO thucan = new ThucAn_TamDTO(tenthucan);
+                int giamthucantam = new SuaBUS().GiamThucAnTamBUS(thucan);
 
-            dgvThucAnTam.DataSource = GetData.GetThucAnTam().Tables[0];
+                dgvThucAnTam.DataSource = GetData.GetThucAnTam().Tables[0];
+            }
 
         }
 

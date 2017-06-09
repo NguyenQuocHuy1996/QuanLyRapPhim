@@ -1,3 +1,7 @@
+Admin
+	Tai khoan: admin
+	Mat khau: admin
+
 Cho quan ly
 	Tai khoan: quanly
 	Mat khau: 123

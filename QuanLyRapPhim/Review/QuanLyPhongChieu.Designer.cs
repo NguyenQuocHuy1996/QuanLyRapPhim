@@ -36,8 +36,8 @@
             this.txtMaPC = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.txtTenPC = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -121,15 +121,6 @@
             this.txtTenPC.Size = new System.Drawing.Size(226, 20);
             this.txtTenPC.TabIndex = 25;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(7, 238);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
-            this.label5.TabIndex = 24;
-            this.label5.Text = "Định dạng:";
-            // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -143,6 +134,15 @@
             this.btnDelete.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(7, 238);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "Định dạng:";
             // 
             // btnAdd
             // 
@@ -246,7 +246,7 @@
             this.dgvPhongChieu.Dock = System.Windows.Forms.DockStyle.Right;
             this.dgvPhongChieu.Location = new System.Drawing.Point(439, 0);
             this.dgvPhongChieu.Name = "dgvPhongChieu";
-            this.dgvPhongChieu.Size = new System.Drawing.Size(355, 472);
+            this.dgvPhongChieu.Size = new System.Drawing.Size(755, 472);
             this.dgvPhongChieu.TabIndex = 17;
             this.dgvPhongChieu.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongChieu_CellClick);
             // 
@@ -255,7 +255,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(794, 472);
+            this.ClientSize = new System.Drawing.Size(1194, 472);
             this.Controls.Add(this.dgvPhongChieu);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.groupBox1);

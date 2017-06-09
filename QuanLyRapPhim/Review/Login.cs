@@ -27,27 +27,23 @@ namespace Review
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            bool error = false;
             if (txtTaiKhoan.Text == "" && txtMatKhau.Text != "")
             {
                 lbThongBao.Text = "Nhập tài khoản";
-                error = true;
             }
             else if (txtMatKhau.Text == "" && txtTaiKhoan.Text != "")
             {
                 lbThongBao.Text = "Nhập mật khẩu";
-                error = true;
             }
             else  if (txtTaiKhoan.Text == "" && txtMatKhau.Text == "")
             {
                 lbThongBao.Text = "Nhập tài khoản và mật khẩu";
-                error = true;
             }
-            if(error == false)
+            else
             {
                 try
                 {
-                    dt = GetData.GetTaiKhoanDK(txtTaiKhoan.Text);
+                    dt = GetData.GetTaiKhoanDK2(txtTaiKhoan.Text,txtMatKhau.Text);
                     if (dt.Tables[0].Rows.Count == 1)
                     {
                         lbThongBao.Text = "Đăng nhập thành công";

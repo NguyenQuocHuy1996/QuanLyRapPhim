@@ -122,5 +122,10 @@ namespace Review
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtTaiKhoan.Text = txtMatKhau.Text = txtRePass.Text = txtHoTen.Text = txtMaNV.Text = txtChucVu.Text = txtNgaySinh.Text = "";
+        }
     }
 }

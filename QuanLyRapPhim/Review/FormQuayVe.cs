@@ -108,7 +108,7 @@ namespace Review
         {
             Login login = new Login();
             login.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void FormQuayVe_FormClosing(object sender, FormClosingEventArgs e)
